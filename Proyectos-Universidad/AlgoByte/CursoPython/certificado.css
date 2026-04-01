@@ -1,0 +1,48 @@
+body {
+    background-color: #E4DFCF;
+}
+
+p {
+    margin: 0;
+    font-family: Whitney, Arial;
+}
+
+span {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+
+.certificado {
+   z-index: 100;
+   width: 800px;
+}
+
+.flex {
+   width: 100%;
+   height: 900px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.back-button {
+   position: fixed;
+   bottom: 30px;
+   left: 30px;
+   background-color: #EF3340;
+   color: white;
+   border: none;
+   border-radius: 20px;
+   padding: 5px 20px;
+   cursor: pointer;
+   transition: all 0.15s;
+}
+
+.back-button:hover {
+   background-color: #f81a29;
+}
+
+.back-button:active {
+   opacity: 0.7;
+}

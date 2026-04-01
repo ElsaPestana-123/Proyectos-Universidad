@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Teoria.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title>Contenido Teorico</title>
+</head>
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="AlgoByte.jpg" alt="AlgoByte logo">
+        </div>
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="python-logo.svg" alt="AlgoByte logo">
+        </div>
+        <div class="upper-profile">
+            <button class="upper-profile-text-button">
+                Ver Perfil
+            </button>
+            <button class="upper-profile-button">
+                <img class="upper-profile-image" src="foto_perfil.jpg" alt="kirby pfp">
+            </button>
+        </div>
+    </div>
+    <div class="left-sidebar">
+        <div>
+            <button class="icon-button">
+                <img class="icon-image" src="home1.svg" alt="icono casa">
+                <p class="icon-text">Inicio</p>
+            </button>
+        </div>
+    </div>
+
+    <p class="title-text">
+        Funciones
+    </p>
+
+    <p class="normal-text">
+        Las funciones son una herramienta indispensable al momento de programar en Python 
+        (y cualquier otro lenguaje de programacion). Tanto las funciones creadas propiamente 
+        por ti como las que son proporcionadas por el lenguaje mismo, permiten automatizar 
+        tareas que usualmente se repiten en el código. Al crear funciones en Python y en 
+        cualquier programa, mejoramos la modularidad del códio, pues se tienen diferentes 
+        componentes (funciones) que se encargan de tareas puntuales. Al mejorar la modularidad, 
+        mejoramos la calidad de nuestros programas y nuestra vida como programadores 
+        será mucho más sencilla.
+    </p>
+
+    <p class="normal-text">
+        Al usar funciones, estamos creando componentes de nuestros programas en Python 
+        que pueden ser utilizados en cualquier momento para llevar a cabo una tarea común, 
+        especialmente, una tarea que requerimos utilizar con frecuencia y que se repite a 
+        menudo. Por ejemplo, una función para abrir, otra para cerrar, otra para actualizar, 
+        otra para saludar, otra para validar datos, y un largo etcétera.
+    </p>
+
+    <p class="subtitle-text">
+        Declarando funciones 
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis de las funciones
+            </p>
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">def</span> <span class="reserved-word">nombreFuncion</span>([parámetro,[nombreParámetro]...]):
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    Bloque de instrucciones
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    [<span class="variable">return</span> valor[,otroValor]
+                </p>
+            
+            </div>
+        </div>
+    </div>
+    
+    <p class="normal-text">
+        Una función en Python, debe tener un nombre, indicado justo después de la instrucción 
+        def, para poder identificarla y llamarla durante la ejecución. Después, al interior 
+        de paréntesis, podemos poner los parámetros. Luego de la definición de la "firma" de 
+        la función, se indica su funcionamiento, con su respectiva indentación como es habitual 
+        en Python. No olvidar los dos puntos para indicar el final de la línea que define 
+        a la firma de la función.
+    </p>
+    
+    <p class="subtitle-text">
+        Acerca de los parámetros
+    </p>
+
+    <p class="normal-text">
+        Hay algunos detalles respecto a los parámetros de una función, veamos:
+    </p>
+
+    <p class="normal-text">
+        1.Una función pueden tener una cantidad cualquier de parámetros, 
+        es decir, pueden tener cero, uno, tres, diez, cien o más parámetros. 
+        Aunque habitualmente no suelen tener más de 4 o 5.
+    </p>
+
+    <p class="normal-text">
+        2.Si una función tiene más de un parámetro cada uno de ellos debe ir separado 
+        por una coma.
+    </p>
+
+    <p class="normal-text">
+        3.Los parámetros de una función también tienen un nombre que los identifica.
+    </p>
+
+    <p class="subtitle-text">
+        Consejos acerca de return
+    </p>
+
+    <p class="normal-text">
+        Debes tener en cuenta dos cosas importantes con la sentencia return:
+    </p>
+
+    <p class="normal-text">
+        1.Cualquier instrucción que se encuentre después de la ejecución de return NO será ejecutada. 
+        Es común encontrar funciones con múltiples sentencias return al interior de condicionales, 
+        pero una vez que el código ejecuta una sentencia return lo que haya de allí hacia abajo no 
+        se ejecutará.
+    </p>
+
+    <p class="normal-text">
+        2.En python, return puede devolver cero o muchos valores. Si es más de uno, se separan por coma.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis de las funciones
+            </p>
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">def</span> <span class="reserved-word">procedimiento</span>(n, nombre):
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="validar"> if </span>(n==0):
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">print</span> ("hola", nombre)
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="validar"> return </span>
+                </p>
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">print</span> ("adiós", nombre)
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <p class="subtitle-text">
+        Invocando funciones y procedimientos en Python
+    </p>
+
+    <p class="normal-text">
+        Ya hemos visto cómo se crean y cómo se ejecutan las 
+        funciones en Python, ahora veamos cómo hacemos uso de ellas.
+
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    nombreFuncion([argumento1,[argumento2]...])
+                </p>
+            
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        Como puedes notar es bastante sencillo invocar o llamar funciones en Python 
+        (de hecho en cualquier lenguaje actual). Necesitas el nombre de la función 
+        y enviarle el valor de los parámetros (los argumentos). Hay que hacer algunas 
+        salvedades respecto a esto.
+    </p>
+    
+    <p class="subtitle-text">
+        Detalles para invocar funciones
+    </p>
+
+    <p class="normal-text">
+        1. El nombre de la función debe coincidir exactamente al momento de invocarla.
+    </p>
+
+    <p class="normal-text">
+        2.El orden de los parámetros debe coincidir. Hay que tener cuidado al momento de 
+        enviar los argumentos, debemos hacerlo en el mismo orden en el que fueron declarados.
+    </p>
+
+    <p class="normal-text">
+        3.Cada argumento enviado también va separado por comas.
+    </p>
+
+    <p class="normal-text">
+        4.Si una función no recibe argumentos, simplemente no ponemos nada al interior
+        de los paréntesis, pero SIEMPRE debemos poner los paréntesis.
+    </p>
+
+    <p class="normal-text">
+        5.El valor retornado por una función puede ser asignado a una variable.
+    </p>
+
+    <p class="normal-text">
+        6.Una función puede llamar a otra dentro de sí misma o incluso puede ser enviada 
+        como argumento de otra.
+    </p>
+
+    <div class="back-next">
+        <a href="">
+            <button class="next-button">
+                &lt;&lt; Atras
+            </button>
+        </a>
+        <a href="">
+            <button class="next-button">
+                Siguiente &gt;&gt;
+            </button>
+        </a> 
+    </div>
+
+</body>
+</html>

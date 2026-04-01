@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Perfil</title>
+
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <meta charset="UTF-8">
+  <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+  <link rel="stylesheet" href="Perfil.css">
+</head>
+
+<body>
+  <div class="title" id="titulo">
+    <button class="x-button" id="xbutton">
+        X
+    </button>
+    <div class="login">
+
+        <p class="username-text">Contraseña</p>
+        <input id="username" class="login-input" type="password" autofocus autocomplete="off">
+
+        <div class="divider"></div>
+
+        <p class="username-text">Contraseña nueva</p>
+        <input id="password" class="login-input" type="password" autocomplete="off">
+
+        <div class="divider"></div>
+
+        <button onclick="
+        changePassword();"
+        class="login-button"
+        id="buttonlogin">
+            Cambiar Contraseña
+        </button>
+        <div class="logo">
+            <img class="logo-image" src="Iconos/algobyte-logo.png" alt="AlgoByte">
+        </div>
+    </div>
+  </div>
+
+  <div class="upper-sidebar">
+    <div class="upper-logo-image">
+      <img class="upper-logo-image" src="Iconos/algobyte-logo.png" alt="AlgoByte logo">
+    </div>
+    <div class="middle-thing" style="flex: 1;">
+      <img class="upper-logo-image" style="margin-top: 3px;" src="Iconos/C++_Logo.svg" alt="AlgoByte logo">
+    </div>
+    <div class="upper-profile">
+      <a href="Perfil.html">
+        <button class="upper-profile-text-button">
+          Ver Perfil
+        </button>
+      </a>
+      <a href="Perfil.html">
+        <button class="upper-profile-button">
+          <img class="upper-profile-image" src="Perfil/kirby.jpg" alt="kirby pfp">
+        </button>
+    </a>
+    </div>
+  </div>
+  <div class="left-sidebar">
+    <div>
+      <a href="Clases.html">
+        <button class="icon-button">
+          <img class="icon-image" src="Iconos/home (1).png" alt="icono casa">
+          <p class="icon-text">Inicio</p>
+        </button>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="profile">
+    <div class="profile-preview">
+      <img class="profile-image" src="Perfil/kirby.jpg" alt="kirby pfp">
+      <p class="profile-text">
+        Ismael Guerrero
+      </p>
+    </div>
+    <div class="profile-description">
+      <p class="profile-description-text">
+        Correo : ismaelguerrero2020.ucv@gmail.com
+      </p>
+      <p class="profile-description-text">
+        Nickname : ismael07
+      </p>
+      <p class="profile-description-text">
+        Edad : 25 años
+      </p>
+      <button id="boton" class="password-button">
+        Cambiar Contraseña
+      </button>
+    </div>
+    <img class="flag" src="Iconos/venezuela.svg" alt="venezuela flag">
+  </div>
+
+  <div>
+    <img style="width: 500px;
+    margin-top: -100px;
+    margin-left: -50px;" src="Iconos/progr.png" alt="progreso">
+  </div>
+
+  <script>
+    let check = 'messidios';
+    let pass = '';
+    function changeDivVisible() {
+            document.getElementById("titulo").style.visibility = "visible";
+        }
+        function changeDivHidden() {
+            document.getElementById("titulo").style.visibility = "hidden";
+        }
+
+        document.getElementById("boton").addEventListener('click', changeDivVisible);
+
+        document.getElementById("xbutton").addEventListener('click', changeDivHidden);
+
+    function changePassword() {
+      const user = document.getElementById("username").value;
+      pass = document.getElementById("password").value;
+      if(user.length === 0) {
+        alert('Por favor ingrese su contraseña');
+        return;
+      }
+      if(pass.length === 0) {
+        alert('Por favor ingrese una Contraseña nueva');
+        return;
+      }  
+      if (user === check && pass.length >= 8) {
+        alert('contraseña cambiada exitosamente');
+        check = pass;
+        changeDivHidden();
+        return;
+      } else if (user === check && pass.length < 8) {
+        alert('su nueva contraseña debe tener 8 caracteres o mas')
+        return;
+      }
+
+      alert('contraseña actual incorrecta');
+      return;
+    }
+  </script>
+</body>
+
+</html>

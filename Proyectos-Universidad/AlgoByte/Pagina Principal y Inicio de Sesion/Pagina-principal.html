@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pruebas</title>
+    <link rel="stylesheet" href="pruebas.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="top-container">
+        <img style="width: 130px; z-index: 2;" src="Iconos/algobyte-logo.png" alt="algoByte-logo">
+        <button id="boton">
+            Acceder
+        </button>
+
+    </div>
+    <p class="title-text">
+        La mejor escuela de programacion <br>
+        de <span style="color: #EF3340;" class="title-span">Venezuela</span> <br> 
+        <p class="subtitle-text">
+            Mas de 4.000.000 de estudiantes <br>
+            aprenden al dia con AlgoByte, <br><br>
+            ¿Estas listo para llevar tu <br>aprendizaje a un nuevo nivel?
+        </p>
+        
+    </p>
+
+    <div class="cursos">
+        <div class="curso">
+            <img class="curso-logo" src="Iconos/C++_Logo.svg" alt="c++ logo">
+            <div>
+                <p class="school-text">
+                    Escuela de C++
+                </p>
+                <p class="description-text">
+                    Este curso está diseñado para principiantes que desean aprender a programar en C++, los estudiantes adquirirán conocimientos fundamentales y avanzados del lenguaje.
+                </p>
+            </div>
+        </div>
+
+        <div></div>
+
+        <div class="curso">
+            <img class="curso-logo" src="Iconos/python-logo.svg" alt="python logo">
+            <div>
+                <p class="school-text">
+                    Escuela de Python
+                </p>
+                <p class="description-text">
+                    Este curso está diseñado para principiantes que desean aprender a programar en python, los estudiantes adquirirán conocimientos fundamentales y avanzados del lenguaje.
+                </p>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div style="color: white;" class="copyright">
+        <div class="copyright-text" style="color: white;">
+                <span>Copyright &#169 Sergio Gomez - Elsa Pestana</span>
+        </div>
+    </div>
+    
+    <div class="bg">
+    </div>
+
+    
+    <div class="title" id="titulo">
+        <button class="x-button" id="xbutton">
+            X
+        </button>
+        <div class="login" id="log">
+
+            <p class="username-text">Usuario</p>
+            <input id="username" class="login-input" type="text" autofocus autocomplete="off">
+
+            <div class="divider"></div>
+
+            <p class="username-text">Contraseña</p>
+            <input id="password" class="login-input" type="password" autocomplete="off">
+
+            <div class="divider"></div>
+
+            <button onclick="
+            login();"
+            class="login-button"
+            id="buttonlogin">
+                Iniciar Sesion
+            </button>
+            <div class="check">
+                <img id="x" class="check-image" src="Iconos/X.png" alt="X">
+                <img id="checkmark" class="check-image" src="Iconos/check.png" alt="checkmark">
+            </div>
+            <div class="logo">
+                <img class="logo-image" src="Iconos/algobyte-logo.png" alt="AlgoByte">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="div1">
+
+    </div>
+
+    <script>
+        function changeDivVisible() {
+            document.getElementById("titulo").style.visibility = "visible";
+            document.getElementById("log").style.display = "block";
+            document.getElementById("top").style.opacity = "0.6";
+        }
+        function changeDivHidden() {
+            document.getElementById("titulo").style.visibility = "hidden";
+            document.getElementById("log").style.display = "none";
+            document.getElementById("top").style.opacity = "1";
+        }
+
+        document.getElementById("boton").addEventListener('click', changeDivVisible);
+
+        document.getElementById("xbutton").addEventListener('click', changeDivHidden);
+
+        var input = document.getElementById("password");
+
+
+        input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+ 
+                event.preventDefault();
+   
+                document.getElementById("buttonlogin").click();
+            }
+        });
+
+        var input2 = document.getElementById("username");
+
+
+        input2.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+ 
+                event.preventDefault();
+   
+                document.getElementById("buttonlogin").click();
+            }
+        });
+
+        function login() {
+                
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            if(user.length === 0) {
+                alert('Por favor ingrese un Usuario');
+                return;
+            }
+            if(pass.length === 0) {
+                alert('Por favor ingrese una Contraseña');
+                return;
+            }  
+
+            if(user === 'pepitojuan93' && pass === 'benito123') {
+                document.getElementById("x").style.width = "1px";
+                document.getElementById("x").style.visibility = "hidden";
+                document.getElementById("checkmark").style.width = "100px";
+                document.getElementById("checkmark").style.visibility = "visible";
+                setTimeout(no, 1000)
+                return;
+            } else if(user === 'ismael07' && pass === 'messidios') {
+                document.getElementById("x").style.width = "1px";
+                document.getElementById("x").style.visibility = "hidden";
+                document.getElementById("checkmark").style.width = "100px";
+                document.getElementById("checkmark").style.visibility = "visible";
+                setTimeout(si, 1000)
+                return;
+            } else {
+                document.getElementById("x").style.width = "80px";
+                document.getElementById("x").style.visibility = "visible";
+                document.getElementById("x").style.margin = "5px";
+                setTimeout(wrong, 400);
+                setTimeout(change, 400);
+                return;
+            }
+
+            function change() {
+                document.getElementById("x").style.width = "1px";
+                document.getElementById("x").style.visibility = "hidden";
+            }
+
+            function wrong() {
+                alert('Por favor ingrese un usuario o contraseña validos');
+            }
+
+            function si() {
+                window.location.href = "Clases.html";
+            }
+
+            function no() {
+                window.location.href = "Clases python.html"
+            }
+        }
+    </script>
+</body>
+</html>

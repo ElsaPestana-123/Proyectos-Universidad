@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="proyecto_intro_Quiz.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title> Quiz #3 - Python</title>
+    
+
+</head>
+
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="AlgoByte.jpg" alt="algoByte_logo"> 
+        </div>
+        
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="python-logo.svg" alt="AlgoByte logo">
+        </div>
+
+        <div class="upper-profile">
+            <button class="upper-profile-button">
+                <img class="upper-profile-image" src="foto_perfil.jpg" alt="kirby">
+            </button>
+        </div>
+    </div>
+
+    <p id="timer">
+        2:00
+    </p>
+
+  <div style="display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;" > 
+
+    <div class="quiz-container">
+       <h2 style="color: #FFFFFF;"> Quiz 3 </h2>
+      <form id="Quiz-from">
+        
+    </div>
+
+    <div class="pregunta">
+        <form id="Quiz-from">
+      <p> 
+        1. ¿Cuáles de las siguientes opciones son tipos de colecciones de datos en python?
+      </p>   
+
+      <label>
+        <input type="checkbox" value="true">
+        Listas
+    </label> <br>
+    
+    <label>
+        <input type="checkbox" value="true">
+        Diccionarios
+    </label> <br>
+
+    <label>
+        <input type="checkbox" value="false">
+        Arrays
+    </label> <br>
+  
+    <label>
+        <input type="checkbox" value="false">
+        Linked List
+    </label>
+
+    </div>
+
+    <div class="pregunta">
+        <p> 
+            2. ¿Qué estructuras de datos en Python son mutables (sus elementos pueden cambiar)?
+        </p>   
+
+        <label>
+            <input type="checkbox" value="false">
+            Tuplas
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="true">
+            Listas
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="true">
+            Conjuntos
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            Cadenas de texto
+        </label>
+
+    </div>
+
+    <div class="pregunta">
+        <p> 
+            3. ¿Qué métodos se pueden usar para añadir elementos a una listas en Python?
+
+        </p>   
+
+        <label>
+            <input type="checkbox" value="true">
+            "append()"
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            "add()"
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="true">
+            "insert()"
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            "extend()"
+        </label>
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            4. ¿Cuáles de las siguientes afirmaciones sobre los diccionarios en Python son verdaderas?
+        </p>  
+
+        <label>
+            <input type="checkbox" value="true">
+            Los diccionarios almacenan pares clave-valor.
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            Las claves de un diccionario pueden repetirse
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="true">
+            Las claves de un diccionario deben ser inmutables
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            Los valores de un diccionario deben ser únicos
+        </label>
+
+      </div>
+    
+    <div class="pregunta">
+        <p> 
+            5. ¿Qué operaciones se pueden realizar con conjuntos en Python?
+        </p>   
+
+        <label>
+            <input type="checkbox" value="true">
+            Unión
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="true">
+            Intersección
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="false">
+            Substracción
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            Concatenación
+        </label>
+
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            6. ¿Qué modos de apertura de archivos permiten leer un archivo en Python?
+        </p>   
+
+        <label>
+            <input type="checkbox" value="true">
+            "r"
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            "w"
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="false">
+            "a"
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="true">
+            "r+"
+        </label>
+
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            7. ¿Qué modos de apertura de archivos permiten escribir en un archivo en Python? 
+        </p>   
+
+        <label>
+            <input type="checkbox" value="false">
+            "r"
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="true">
+            "w"
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="false">
+            "a"
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="true">
+            "w+"
+        </label>
+
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            8. ¿Qué métodos se utilizan para leer contenido de un archivo en Python?
+        </p>   
+
+        <label>
+            <input type="checkbox" value="true">
+            "read()"
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            "readline()"
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="true">
+            "readlines()"
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            "readll()"
+        </label>
+
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            9. ¿Qué métodos se usan para escribir datos en un archivo en Python?
+        </p>   
+
+        <label>
+            <input type="checkbox" value="false">
+            "write()"
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            "append()"
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="true">
+            "writelines()"
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            "insert()"
+        </label>
+
+
+      </div>
+
+    <div class="pregunta" style="margin-bottom: 20px;">
+        <p> 
+            10. ¿Qué métodos se utilizan para cerrar un archivo después de usarlo en Python?
+        </p>   
+
+       <label>
+            <input type="checkbox" value="true">
+            "close()"
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            "end()"
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="false">
+            "finalize()"
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="true">
+            "detach()"
+        </label>
+
+</div>
+
+      <button style="width: 150px;" type="button" onclick="ganaPunto();">Enviar Respuestas</button>
+    </form>
+    <div id="result"></div>
+</div>
+</div>
+
+<div style="display: flex;
+justify-content: center;">
+    <a style="text-decoration: none;" href="Clases python.html">
+        <button class="back-button" id="back-btn">
+          Volver
+        </button>
+    </a>
+</div>
+
+    <script src="Proyecto_Intro_Quiz3_python.js"></script>
+</body>
+</html>

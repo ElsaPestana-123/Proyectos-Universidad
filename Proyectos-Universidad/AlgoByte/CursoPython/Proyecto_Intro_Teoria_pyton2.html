@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Teoria.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title>Contenido Teorico</title>
+</head>
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="AlgoByte.jpg" alt="AlgoByte logo">
+        </div>
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="python-logo.svg" alt="AlgoByte logo">
+        </div>
+        <div class="upper-profile">
+            <button class="upper-profile-text-button">
+                Ver Perfil
+            </button>
+            <button class="upper-profile-button">
+                <img class="upper-profile-image" src="foto_perfil.jpg" alt="kirby pfp">
+            </button>
+        </div>
+    </div>
+    <div class="left-sidebar">
+        <div>
+            <button class="icon-button">
+                <img class="icon-image" src="home1.svg" alt="icono casa">
+                <p class="icon-text">Inicio</p>
+            </button>
+        </div>
+    </div>
+
+    <p class="title-text">
+       Condicionales
+    </p>
+
+    <p class="normal-text">
+        Los condicionales en Python, son una estructura de control esencial al momento de programar 
+        y aprender a programar. Tanto Python como la mayoría de los lenguajes de programación utilizados 
+        actualmente, nos permiten hacer uso de estas estructuras para definir ciertas acciones y 
+        decisiones específicas en nuestros programas. Un condicional, permite establecer una serie de 
+        condiciones al interior de nuestro programa, que nos ayudan a determinar qué acciones llevar a 
+        cabo dadas ciertas circunstancias.
+    </p>
+
+    <p class="normal-text">
+        Existen diferentes tipos de condicionales, cada uno tiene una utilidad y funcionalidad diferente. 
+        Cada uno considera diferentes situaciones que se pueden llegar a presentar durante la ejecución de un programa. 
+        Depende entonces del conocimiento que tengamos acerca de cada uno de los condicionales saber determinar 
+        correctamente cuando es necesario usar uno u otro. Tenemos a nuestra disposición los siguientes tipos de condicionales en Python:
+    </p>
+
+    <p class="subtitle-text">
+        Condicionales if
+    </p>
+    
+    <p class="normal-text">
+        Los condicionales if en Python, son una estructura de control condicional, también llamadas 
+        estructuras selectivas de casos simples (porque solo definen un posible flujo), las cuales nos 
+        permiten tomar cierta decisión al interior de nuestro programa, es decir, nos permiten determinar 
+        qué acciones ejecutar según cierta. Por ejemplo, determinar si un número cualquiera es mayor 
+        que 10 y de acuerdo a esto mostrar un mensaje (o cualquier acción que sea necesaria).
+    </p>
+    
+    <p class="subtitle-text">
+        ¿Cómo funciona el condicional If?
+    </p>
+
+    <p class="normal-text">
+        Para comprender mejor cómo funciona el condicional if, una muy buena forma es partiendo de 
+        un ejemplo. Supongamos que queremos verificar si el resultado de una suma ingresada por el 
+        usuario es correcto o no. Para este ejemplo, el condicional if, es el encargado de verificar 
+        si el resultado ingresado corresponde o no a la respuesta esperada de esa suma. El condicional 
+        if, funciona verificando la condición ingresada y de acuerdo a su valor de verdad (falso o verdadero) 
+        lleva a cabo o no las instrucciones que hayamos indicado.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis del Condicional If
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">if</span> (condicion a evaluar): <span class="comment">## Por ejemplo x>= 10</span>
+                </p>
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    Bloque de Instrucciones si se cumple la condición....
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    Solo se ejecutará si la condición es verdadera....
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text">Bloque de Instrucciones restante del Algoritmo....</p>
+
+                <p class="code-text">Se ejecutara siempre, pues esta fuera de la condicion....</p>
+
+            </div>
+        </div>
+    </div>
+    
+
+    <p class="normal-text">
+        Efectivamente, los condicionales son extremadamente útiles pues permiten definirle a 
+        nuestro software múltiples vías de ejecución contemplando así todas las posibilidades 
+        durante la ejecución. Ahora pasaremos a ver el otro tipo de condicional.
+    </p>
+
+    <p class="subtitle-text">
+        Condicional if-else
+    </p>
+
+    <p class="normal-text">
+        Los condicionales if else, son una estructura de control que nos permite tomar cierta 
+        decisión al interior de nuestro programa. Es decir, nos permite determinar qué acciones 
+        tomar dada o no cierta condición. Es importante notar la parte del NO, pues ya no solo 
+        definimos qué hacer en caso de que se cumpla, sino (else) también qué hacer si no se 
+        cumple cierta condición. Se les conoce también como estructuras selectivas de casos dobles 
+        (porque definen ambas posibilidades en la ejecución --si se cumple y si no se cumple --).
+    </p>
+    
+    <p class="subtitle-text">
+        ¿Cómo funciona un Condicional If Else?
+    </p>
+
+    <p class="normal-text">
+        Para comprender mejor cómo funciona el condicional if else, una muy buena forma es 
+        partiendo de un ejemplo. Imaginemos, que en nuestro programa, deseamos implementar 
+        un sistema de inicio de sesión de usuarios, comprobando si la información suministrada 
+        coincide con unos los valores correctos y en ese caso mostrar un mensaje de bienvenida, 
+        y en caso de que no, se mostrará un mensaje de error.
+    </p>
+
+    <p class="normal-text">
+        Como podemos imaginar, es entonces necesario hacer que nuestro programa, tome una 
+        decisión, de acuerdo a los valores ingresados por el usuario, y definir los dos casos 
+        posibles (si falló o no). Es para esto que sirve el condicional if else, nos permite 
+        definir una condición que se debe cumplir y de acuerdo a su cumplimiento o no tomar 
+        una acción correspondiente. 
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis del Condicional If-else
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">if</span> (condicion a evaluar) <span class="comment">## Por ejemplo z &lt;= 50 </span>
+                </p>
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    Bloque de Instrucciones si se cumple la condición....
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    Solo se ejecutará si la condición es verdadera....
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text">
+                 <span class="reserved-word">else:</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    Bloque de Instrucciones si <span class="variable">NO</span> se cumple la condición....
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    Solo se ejecutará si la condición es falsa....
+                </p>
+
+                <p class="code-text">....</p>
+                <p class="code-text">Bloque de Instrucciones restante del Algoritmo....</p>
+                <p class="code-text">Se ejecutara siempre, pues esta fuera de la condicion....</p>
+            </div>
+        </div>
+    </div>
+
+
+    <p class="normal-text">
+        La sintaxis de un condicional if else, es en principio similar a la del condicional if, 
+        pero adicionando una nueva "estructura" que sería el else, el cual indica la acción o 
+        conjunto de acciones a llevar a cabo si no se cumplió la condición inicial (la del if). 
+        Cabe resaltar que el else, no puede existir por sí solo, solo tiene sentido si antes se 
+        indicó un if. Es decir, SIEMPRE se pone un else inmediatamente después del if, en caso 
+        de ser necesario.
+    </p>
+
+    <div class="back-next">
+        <a href="">
+            <button class="next-button">
+                &lt;&lt; Atras
+            </button>
+        </a>
+        <a href="">
+            <button class="next-button">
+                Siguiente &gt;&gt;
+            </button>
+        </a> 
+    </div>
+
+</body>
+</html>

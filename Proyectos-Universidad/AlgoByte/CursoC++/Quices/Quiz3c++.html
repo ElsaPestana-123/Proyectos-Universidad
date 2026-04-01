@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="proyecto_intro_Quiz.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title> Quiz #3 - C++ </title>
+    
+
+</head>
+
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="Iconos/algobyte-logo.png" alt="algoByte_logo"> 
+        </div>
+        
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="Iconos/C++_Logo.svg" alt="AlgoByte logo">
+        </div>
+
+        <div class="upper-profile">
+            <button class="upper-profile-button">
+                <img class="upper-profile-image" src="Perfil/kirby.jpg" alt="kirby">
+            </button>
+        </div>
+    </div>
+
+    <p id="timer">
+        2:00
+    </p>
+
+  <div style="display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;" > 
+
+    <div class="quiz-container">
+       <h2 style="color: #FFFFFF;"> Quiz 3 </h2>
+      <form id="Quiz-from">
+        
+    </div>
+
+    <div class="pregunta">
+        <form id="Quiz-from">
+      <p> 
+        1. ¿Cual es la forma correcta de declarar un arreglo de enteros de tamaño 10?
+      </p>   
+
+      <label>
+        <input type="checkbox" value="true">
+        int arreglo[10];
+    </label> <br>
+    
+    <label>
+        <input type="checkbox" value="false">
+        miArreglo[10];
+    </label> <br>
+
+    <label>
+        <input type="checkbox" value="true">
+        int arreglo = new int[10];
+    </label> <br>
+  
+    <label>
+        <input type="checkbox" value="false">
+        int arreglo{10};
+    </label>
+
+    </div>
+
+    <div class="pregunta">
+        <p> 
+            2. ¿Como se accede al tercer elemento de un arreglo llamado miArreglo?
+        </p>   
+
+        <label>
+            <input type="checkbox" value="false">
+            miArreglo[3];
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="true">
+            miArreglo[2];
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="false">
+            miArreglo(2);
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            miArreglo{3};
+        </label>
+
+    </div>
+
+    <div class="pregunta">
+        <p> 
+            3. ¿Cual es la forma correcta de declarar una matriz?
+
+        </p>   
+
+        <label>
+            <input type="checkbox" value="true">
+            int matriz[3][3];
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            int matriz = 3;
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="false">
+            int matriz(3,3);
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="true">
+            int matriz = new int [3][3];
+        </label>
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            4. ¿Cual es el proposito del constructor en una clase? 
+        </p>  
+
+        <label>
+            <input type="checkbox" value="false">
+            Destruir los objetos de una clase
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            Copiar los objetos de una clase
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="true">
+            Inicializar los objetos de una clase
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            Comparar los objetos de una clase
+        </label>
+
+      </div>
+    
+    <div class="pregunta">
+        <p> 
+            5. ¿Que palabra clave se utiliza par definir una clase en c++? 
+        </p>   
+
+        <label>
+            <input type="checkbox" value="true">
+            class
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            define
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="false">
+            object
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="true">
+            struct
+        </label>
+
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            6. ¿Como pueden ser los atributos de una clase?
+        </p>   
+
+        <label>
+            <input type="checkbox" value="true">
+            publicos
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="true">
+            privados
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="false">
+            sistemicos
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="true">
+            protegidos
+        </label>
+
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            7. ¿Cual es la forma correcta para acceder a un atributo publico de una clase?  
+        </p>   
+
+        <label>
+            <input type="checkbox" value="false">
+            obj->miembro
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="true">
+            obj.miembro
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="false">
+            obj:miembro
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            obj#miembno
+        </label>
+
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            8. ¿Cual es la forma correcta de liberar memoria asignada dinamicamente a un arreglo?
+        </p>   
+
+        <label>
+            <input type="checkbox" value="false">
+            release arreglo;
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            free(arreglo);
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="true">
+            delete[] arreglo;
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            delete arreglo;
+        </label>
+
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            9. ¿Que es la herencia en Programacion Orientada a Objetos?
+        </p>   
+
+        <label>
+            <input type="checkbox" value="false">
+            La capacidad de una clase de ocultar sus datos
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            La capacidad de una clase de tener multiples constructores
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="false">
+            La capacidad de una clase de sobrecargar operadores
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="true">
+            La capacidad de una clase de derivar propiedades y comportamientos de otra clase
+        </label>
+
+
+      </div>
+
+    <div class="pregunta" style="margin-bottom: 20px;">
+        <p> 
+            10. ¿Que es la encapsulacion en Programacion Orientada a Objetos?
+        </p>   
+
+       <label>
+            <input type="checkbox" value="false">
+            La capacidad de una clase de derivar propiedades de otra clase
+        </label> <br>
+        
+        <label>
+            <input type="checkbox" value="false">
+            La capacidad de una clase de tener multiples metodos con el mismo nombre
+        </label> <br>
+    
+        <label>
+            <input type="checkbox" value="true">
+            La agrupacion de datos y metodos que operan sobre esos datos en una sola unidad
+        </label> <br>
+      
+        <label>
+            <input type="checkbox" value="false">
+            La capacidad de una clase de sobrecargar operadores
+        </label>
+
+    </div>
+
+        <button style="width: 150px;" type="button" onclick="ganaPunto();">Enviar Respuestas</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    </div>
+
+    <div style="display: flex;
+    justify-content: center;">
+        <a style="text-decoration: none;" href="Clases.html">
+            <button class="back-button" id="back-btn">
+            Continuar
+            </button>
+        </a>
+    </div>
+
+    <script src="quiz3.js"></script>
+</body>
+</html>

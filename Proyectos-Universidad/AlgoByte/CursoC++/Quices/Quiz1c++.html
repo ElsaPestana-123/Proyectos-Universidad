@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="proyecto_intro_Quiz.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title> Quiz #1 - C++ </title>
+    
+
+</head>
+
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="Iconos/algobyte-logo.png" alt="algoByte_logo"> 
+        </div>
+        
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="Iconos/C++_Logo.svg" alt="AlgoByte logo">
+        </div>
+
+        <div class="upper-profile">
+            <button class="upper-profile-button">
+                <img class="upper-profile-image" src="Perfil/kirby.jpg" alt="kirby">
+            </button>
+        </div>
+    </div>
+
+    <p id="timer">
+        1:00
+    </p>
+
+  <div style="display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;" > 
+
+    <div class="quiz-container">
+       <h2 style="color: #FFFFFF;"> Quiz 1 </h2>
+      <form id="Quiz-from">
+        
+    </div>
+
+    <div class="pregunta">
+        <form id="Quiz-from">
+      <p> 
+        1. Las variables pueden cambiar su valor durante la ejecucion.
+      </p>   
+
+    <label>
+        <input type="radio" name="q1" value="true">
+        Verdadero
+    </label>
+
+    <label>
+        <input type="radio" name="q1" value="false">
+        Falso
+    </label>
+
+    </div>
+
+    <div class="pregunta">
+        <p> 
+            2. Las constantes se declaran usando la palabra clave const
+        </p>   
+
+    <label>
+        <input type="radio" name="q2" value="true">
+        Verdadero
+    </label>
+  
+    <label>
+        <input type="radio" name="q2" value="false">
+        Falso
+    </label>
+
+    </div>
+
+    <div class="pregunta">
+        <p> 
+            3. El operador = se utiliza par comparar dos valores
+
+        </p>   
+
+    <label>
+        <input type="radio" name="q3" value="true">
+        Verdadero
+    </label>
+  
+    <label>
+        <input type="radio" name="q3" value="false">
+        Falso
+    </label>
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            4. Una variable booleana solo puede tener dos valores; true o false  
+        </p>  
+
+    <label>
+        <input type="radio" name="q4" value="true">
+        Verdadero
+    </label>
+  
+    <label>
+        <input type="radio" name="q4" value="false">
+        Falso
+    </label>
+
+      </div>
+    
+    <div class="pregunta">
+        <p> 
+            5. El preprocesador #define se utiliza para declarar variables   
+        </p>   
+
+    <label>
+        <input type="radio" name="q5" value="true">
+        Verdadero
+    </label>
+  
+    <label>
+        <input type="radio" name="q5" value="false">
+        Falso
+    </label>
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            6. El condicional if permite ejecutar un bloque de codigo solo si una condicion es verdadera
+        </p>   
+
+    <label>
+        <input type="radio" name="q6" value="true">
+        Verdadero
+    </label>
+  
+    <label>
+        <input type="radio" name="q6" value="false">
+        Falso
+    </label>
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            7. Las constantes pueden cambiar sus valores durante la ejecucion de un programa    
+        </p>   
+
+    <label>
+        <input type="radio" name="q7" value="true">
+        Verdadero
+    </label>
+  
+    <label>
+        <input type="radio" name="q7" value="false">
+        Falso
+    </label>
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            8. El condicional switch se utiliza para seleccionar una de varias opciones basadas en el valor de una variable
+        </p>   
+
+    <label>
+        <input type="radio" name="q8" value="true">
+        Verdadero
+    </label>
+  
+    <label>
+        <input type="radio" name="q8" value="false">
+        Falso
+    </label>
+
+      </div>
+
+    <div class="pregunta">
+        <p> 
+            9. Las variables deben ser inicializadas en el momento de su declaración 
+        </p>   
+    <label>
+        <input type="radio" name="q9" value="true">
+        Verdadero
+    </label>
+  
+    <label>
+        <input type="radio" name="q9" value="false">
+        Falso
+    </label>
+
+      </div>
+
+    <div class="pregunta" style="margin-bottom: 20px;">
+        <p> 
+            10. El operador != se utiliza para verificar si dos valores son diferentes
+        </p>   
+
+    <label>
+        <input type="radio" name="q10" value="true">
+        Verdadero
+    </label>
+  
+    <label>
+        <input type="radio" name="q10" value="false">
+        Falso
+    </label>
+
+</div>
+
+      <button style="width: 150px;" type="button" onclick="submitQuiz();">Enviar Respuestas</button>
+    </form>
+    <div id="result"></div>
+</div>
+</div>
+
+<div style="display: flex;
+justify-content: center;">
+    <a style="text-decoration: none;" href="Clases.html">
+        <button class="back-button" id="back-btn">
+          Volver
+        </button>
+    </a>
+</div>
+
+
+    <script src="quiz1.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Teoria.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title>Contenido Teorico</title>
+</head>
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="AlgoByte.jpg" alt="AlgoByte logo">
+        </div>
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="python-logo.svg" alt="AlgoByte logo">
+        </div>
+        <div class="upper-profile">
+            <button class="upper-profile-text-button">
+                Ver Perfil
+            </button>
+            <button class="upper-profile-button">
+                <img class="upper-profile-image" src="foto_perfil.jpg" alt="kirby pfp">
+            </button>
+        </div>
+    </div>
+    <div class="left-sidebar">
+        <div>
+            <button class="icon-button">
+                <img class="icon-image" src="home1.svg" alt="icono casa">
+                <p class="icon-text">Inicio</p>
+            </button>
+        </div>
+    </div>
+
+    <p class="title-text">
+        Los ciclos o bucles
+    </p>
+
+    <p class="normal-text">
+        Los ciclos, también conocidos como bucles o estructuras de control repetitivas, son de total 
+        importancia para el proceso de creación de un programa. Un ciclo en Python o bucle en Python 
+        (como prefieras llamarlos) te permite repetir una o varias instrucciones cuantas veces lo 
+        necesitemos. Un ciclo nos ayuda a llevar a cabo una tarea repetitiva en una cantidad de líneas 
+        muy pequeña y de forma prácticamente automática.
+    </p>
+
+    <p class="normal-text">
+        Existen diferentes tipos de ciclos o bucles en Python, cada uno tiene una utilidad para casos 
+        específicos y depende de las habilidad y conocimientos que posea el programador el poder determinar 
+        en qué momento es bueno usar alguno de ellos. Tenemos entonces a la disposición los 
+        siguientes tipos de ciclos en Python:
+    </p>
+
+    <p class="subtitle-text">
+        Ciclo while
+    </p>
+    
+    <p class="normal-text">
+        Los ciclos while son una estructura cíclica, que nos permite ejecutar una o varias líneas de 
+        código de manera repetitiva sin necesidad de tener un valor inicial e incluso a veces sin siquiera 
+        conocer cuando se va a dar el valor final que esperamos. Con el ciclo while, no conoces el 
+        cuándo sino el cómo. Es decir, conocer la condición bajo la cual se va a detener el ciclo, 
+        pero no sabes cuántas iteraciones tomará eso, ni cuánto tiempo. Por ello se los llama ciclos i
+        ndeterminados.
+    </p>
+    
+    <p class="subtitle-text">
+        ¿Cómo funciona el ciclo while
+    </p>
+
+    <p class="normal-text">
+        Para comprender mejor el funcionamiento del ciclo while, pongamos un buen ejemplo, 
+        imaginemos que, por algún motivo, queremos pedirle a un usuario una serie de números 
+        cualquiera y que solo dejaremos de hacerlo cuando el usuario ingrese el número 0. 
+        Como vemos, en este caso, no sabemos cuántas veces pedir un valor, solo sabemos en 
+        qué momento dejar de pedir uno, pues no tenemos ni idea de cuándo al usuario se le 
+        va a ocurrir ingresar un cero. Es algo indeterminado para nosotros. Sin embargo, el 
+        ciclo while nos permite ejecutar una acción de forma "infinita" hasta que se cumpla 
+        alguna condición específica, en nuestro caso sería que el numero sea 0.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis del Ciclo While
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="variable">While</span> (condicion de finalización): <span class="comment">## Por ejemplo entrada == 100</span>
+                </p>
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    Bloque de Instrucciones....
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    Dentro del <span class="variable">While</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                
+                <p class="code-text" style="text-indent: 15px;">
+                    Bloque de Instrucciones....
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    Fuera del <span class="variable">While</span>
+                </p>
+                
+
+            </div>
+        </div>
+    </div>
+    
+
+    <p class="normal-text">
+        La sintaxis de un ciclo while es incluso más simple y "legible" que la de otros ciclos,
+        pues simplemente requerimos tener clara una condición de parada. En realidad, en la 
+        mayoría de los lenguajes de alto nivel la manera de escribir un ciclo while (la sintaxis) 
+        es incluso muy similar, así que con tan solo tener bien clara una condición de 
+        finalización para el ciclo tendremos prácticamente todo hecho.
+    </p>
+
+    <p class="subtitle-text">
+        La Instrucción Break
+    </p>
+    
+    <p class="normal-text">
+        Como su nombre lo indica, esta instrucción permitirá "romper" o básicamente detener 
+        cualquier ciclo en el que se encuentre una vez es ejecutada. Al usar while(True), nos 
+        aseguramos que el ciclo se ejecute por siempre. Sin embargo, al poner un llamado a break 
+        al interior, el cual se ejecuta SOLO cuando llegue a la condición de finalización
+        de esta manera nos aseguramos de que se cierre el ciclo en ese preciso momento. Así nos hemos 
+        ahorrado de repetir el llamado a input y al mensaje repetidos.
+    </p>
+
+    <p class="subtitle-text">
+        Ciclo for 
+    </p>
+
+    <p class="normal-text">
+        Los ciclos for (o ciclos para) son una estructura de control cíclica. Nos permiten 
+        ejecutar una o varias líneas de código de forma iterativa (o repetitiva), pero teniendo 
+        cierto control y conocimiento sobre las iteraciones. En el ciclo for en Python, es necesario 
+        tener un valor inicial y un valor final, y opcionalmente podemos hacer uso del tamaño 
+        del "paso" entre cada "giro" o iteración del ciclo.
+    </p>
+    
+    <p class="subtitle-text">
+        ¿Cómo funciona un Ciclo For?
+    </p>
+
+    <p class="normal-text">
+        Para comprender mejor el funcionamiento del ciclo for, solucionemos un pequeño ejercicio práctico. 
+        Supongamos que queremos mostrar los números pares entre el 500 y el 1000. 
+        Con esta información inmediatamente podemos determinar que por medio de un ciclo debemos mostrar 
+        una serie de números como la siguiente: 500 502 504 506 ... 600 ... 852 ... 906 ... 980 .. 1000. 
+        Tenemos entonces todo lo necesario para nuestro ciclo. Tenemos un valor inicial que sería el 500, un 
+        valor final (1000) y tenemos un tamaño de paso que es 2 (los números pares). Estamos ahora en 
+        capacidad de determinar los componentes esenciales para un ciclo for.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis del Ciclo for
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="variable">for</span> variable_controladora <span class="variable">in</span> <span class="reserved-word">range</span> (valor_inicial, valor_final, tamaño_paso):
+                </p>
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    Bloque de instrucciones....
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text">Bloque de Instrucciones fuera del ciclo....</p>
+            </div>
+        </div>
+    </div>
+
+
+    <p class="normal-text">
+        La sintaxis de un ciclo for es simple en Python. En realidad, en la mayoría de 
+        los lenguajes de alto nivel es incluso muy similar, de hecho, con tan solo tener 
+        bien claros los 3 componentes del ciclo for (inicio, final y tamaño de paso) 
+        tenemos prácticamente todo hecho
+    </p>
+
+    <p class="normal-text">
+        Como pudimos observar, la magia está en la función range() de Python, pues con esta 
+        definimos desde dónde y hasta dónde irá el ciclo, además del tamaño del paso. 
+        De hecho, la función range(), solo necesita como mínimo el límite superior, generando 
+        así un rango de números desde cero hasta ese límite de uno en uno. 
+        Finalmente, esta función omite el último valor, de ese modo, el ciclo va de valor_inicial 
+        hasta valor_final - 1 (hay que quitarle uno al valor_final).
+    </p>
+
+    <div class="back-next">
+        <a href="">
+            <button class="next-button">
+                &lt;&lt; Atras
+            </button>
+        </a>
+        <a href="">
+            <button class="next-button">
+                Siguiente &gt;&gt;
+            </button>
+        </a> 
+    </div>
+
+</body>
+</html>

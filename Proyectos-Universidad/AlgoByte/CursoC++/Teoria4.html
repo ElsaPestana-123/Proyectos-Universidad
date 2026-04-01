@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Teoria.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title>Tema 4: Funciones</title>
+</head>
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="Iconos/algobyte-logo.png" alt="AlgoByte logo">
+        </div>
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="Iconos/C++_Logo.svg" alt="AlgoByte logo">
+        </div>
+        <div class="upper-profile">
+            <a href="Perfil.html">
+                <button class="upper-profile-text-button">
+                    Ver Perfil
+                </button>
+            </a>
+            <a href="Perfil.html">
+                <button class="upper-profile-button">
+                    <img class="upper-profile-image" src="Perfil/kirby.jpg" alt="kirby pfp">
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="left-sidebar">
+        <div>
+            <a href="Clases.html">
+                <button class="icon-button">
+                    <img class="icon-image" src="Iconos/home (1).png" alt="icono casa">
+                    <p class="icon-text">Inicio</p>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <p class="title-text">
+       Funciones
+    </p>
+
+    <p class="normal-text">
+        Las funciones son una herramienta indispensable para el programador, tanto las funciones creadas por él mismo como las que le son proporcionadas por otras librerías, cualquiera que sea el caso, las funciones permiten automatizar tareas repetitivas, encapsular el código que utilizamos, e incluso mejorar la seguridad, confiabilidad y estabilidad de nuestros programas. Dominar el uso de funciones es de gran importancia, permiten modularizar nuestro código, separarlo según las tareas que requerimos, por ejemplo una función para abrir, otra para cerrar, otra para actualizar, etc. básicamente una función en nuestro código debe contener la implementación de una utilidad de nuestra aplicación, es decir que por cada utilidad básica (abrir, cerrar, cargar, mover, etc.) sería adecuado tener al menos una función asociada a ésta.
+    </p>
+
+    <p class="subtitle-text">
+        ¿Funciones, métodos o procedimientos?
+    </p>
+
+    <p class="normal-text">
+        En el mundo de la programación, muchos acostumbramos hablar indistintamente de estos tres términos sin embargo poseen deferencias fundamentales.
+    </p>
+    <p class="subsubtitle-text">
+        Funciones:
+    </p>
+
+    <p class="normal-text">
+        Las funciones son un conjunto de procedimiento encapsulados en un bloque, usualmente reciben parámetros, cuyos valores utilizan para efectuar operaciones y adicionalmente retornan un valor. Esta definición proviene de la definición de función matemática la cual posee un dominio y un rango, es decir un conjunto de valores que puede tomar y un conjunto de valores que puede retornar luego de cualquier operación.
+    </p>
+
+    <p class="subsubtitle-text">
+        Métodos:
+    </p>
+
+    <p class="normal-text">
+        Los métodos y las funciones son funcionalmente idénticos, pero su diferencia radica en el contexto en el que existen. Un método también puede recibir valores, efectuar operaciones con estos y retornar valores, sin embargo en método está asociado a un objeto, básicamente un método es una función que pertenece a un objeto o clase, mientras que una función existe por sí sola, sin necesidad de un objeto para ser usada.
+    </p>
+
+    <p class="subsubtitle-text">
+        Procedimientos:
+    </p>   
+
+    <p class="normal-text">
+        Los procedimientos son básicamente lo un conjunto de instrucciones que se ejecutan sin retornar ningún valor, hay quienes dicen que un procedimiento no recibe valores o argumentos, sin embargo en la definición no hay nada que se lo impida. En el contexto de C++ un procedimiento es básicamente una función void que no nos obliga a utilizar una sentencia return.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Declarando funciones
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    tipo <span style="color: rgb(0, 177, 0);">nombreFuncion</span>([tipo nombreArgumento,[tipo nombreArgumento]...])
+                </p>
+                <p class="code-text">
+                    {
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    Bloque de Instrucciones...
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                <p class="code-text"> 
+                    <span class="reserved-word">return</span> valor;
+                </p>
+                <p class="code-text">
+                    }
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        Recordemos que una función siempre retorna algo, por lo tanto es obligatorio declararle un tipo (el primer componente de la sintaxis anterior), luego debemos darle un nombre a dicha función, para poder identificarla y llamarla durante la ejecución, después al interior de paréntesis, podemos poner los argumentos o parámetros. Luego de la definición de la "firma" de la función, se define su funcionamiento entre llaves; todo lo que esté dentro de las llaves es parte del cuerpo de la función y éste se ejecuta hasta llegar a la instrucción return.
+    </p>
+
+    <p class="subtitle-text">
+        Acerca de los argumentos o parámetros
+    </p>
+
+    <p class="normal-text">
+        1.- Una función o procedimiento pueden tener una cantidad cualquier de parámetros, es decir pueden tener cero, uno, tres, diez, cien o más parámetros. Aunque habitualmente no suelen tener más de 4 o 5.
+    </p>
+
+    <p class="normal-text">
+        2.- Si una función tiene más de un parámetro cada uno de ellos debe ir separado por una coma.
+    </p>
+
+    <p class="normal-text">
+        3.- Los argumentos de una función también tienen un tipo y un nombre que los identifica. El tipo del argumento puede ser cualquiera y no tiene relación con el tipo de la función.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Ejemplos de Funciones
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    int <span style="color: rgb(0, 177, 0);">funcionEntera</span>()<span>//Función sin parámetros</span>
+                </p>
+                <p class="code-text">
+                    {
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                   <span class="reserved-word">int</span> suma = <span class="variable">5</span>=<span class="variable">5</span>;
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">return</span> suma; <span class="comment">//Acá termina la ejecución de la función</span>
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">return</span> 5+5; <span class="comment">//Este return nunca se ejecutará</span>
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">int</span> x = <span class="variable">10</span>; <span class="comment">////Esta línea nunca se ejecutará</span>
+                </p>
+                <p class="code-text">
+                    }
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        Como puedes ver es un ejemplo sencillo, si ejecutas esto, la función te retornará el valor de suma que es 10 (5+5). Las líneas posteriores no se ejecutarán nunca, aunque no generan error alguno, no tienen utilidad. Puedes notar que para este caso es lo mismo haber escrito return suma que escribir return 5+5. Ambas líneas funcionan equivalentemente.
+    </p>
+
+    <p class="subtitle-text">
+        Invocando funciones y procedimientos en C++
+    </p>
+
+    <p class="normal-text">
+        Ya hemos visto cómo se crean y cómo se ejecutan las funciones en C++, ahora veamos cómo hacemos uso de ellas.
+    </p>
+
+    <p class="code-text" style="margin: 20px;">
+        nombreFuncion([valor, [valor]...]);
+    </p>
+
+    <p class="normal-text">
+        Como puedes notar es bastante sencillo invocar o llamar funciones en C++ (de hecho en cualquier lenguaje actual), sólo necesitas el nombre de la función y enviarle el valor de los parámetros.
+    </p>
+
+    <div class="quiz">
+        <a href="quiz2c++.html">
+            <button class="quiz-button">
+                Presentar quiz
+            </button>
+        </a>
+    </div>
+
+    <div class="back-next">
+        <a href="Teoria3.html">
+            <button class="next-button">
+                &lt;&lt; Atras
+            </button>
+        </a>
+        <a href="Teoria5.html">
+            <button class="next-button">
+                Siguiente &gt;&gt;
+            </button>
+        </a> 
+    </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Teoria.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title>Tema 3: Ciclos</title>
+</head>
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="Iconos/algobyte-logo.png" alt="AlgoByte logo">
+        </div>
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="Iconos/C++_Logo.svg" alt="AlgoByte logo">
+        </div>
+        <div class="upper-profile">
+            <a href="Perfil.html">
+                <button class="upper-profile-text-button">
+                    Ver Perfil
+                </button>
+            </a>
+            <a href="Perfil.html">
+                <button class="upper-profile-button">
+                    <img class="upper-profile-image" src="Perfil/kirby.jpg" alt="kirby pfp">
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="left-sidebar">
+        <div>
+            <a href="Clases.html">
+                <button class="icon-button">
+                    <img class="icon-image" src="Iconos/home (1).png" alt="icono casa">
+                    <p class="icon-text">Inicio</p>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <p class="title-text">
+       Ciclos
+    </p>
+
+    <p class="normal-text">
+        Los ciclos o también conocidos como bucles, son una estructura de control esencial al momento de programar. Tanto C como C++ y la mayoría de los lenguajes utilizados actualmente, nos permiten hacer uso de estas estructuras. Un ciclo o bucle permite repetir una o varias instrucciones cuantas veces lo necesitemos, por ejemplo, si quisiéramos escribir los números del uno al cien no tendría sentido escribir cien líneas mostrando un numero en cada una, para esto y para muchísimas cosas más, es útil un ciclo, permitiéndonos hacer una misma tarea en una cantidad de líneas muy pequeña y de forma prácticamente automática.
+    </p>
+    <p class="normal-text">
+        Existen diferentes tipos de ciclos o bucles, cada uno tiene una utilidad para casos específicos y depende de nuestra habilidad y conocimientos poder determinar en qué momento es bueno usar alguno de ellos. Tenemos entonces a nuestra disposición los siguientes tipos de ciclos en C++:
+    </p>
+    
+    <ul class="normal-text">
+       <strong>&#183;</strong> Ciclo for
+    </ul>
+    <ul class="normal-text">
+        <strong>&#183;</strong> Ciclo while 
+    </ul>
+    <ul class="normal-text">
+        <strong>&#183;</strong> Ciclo do-while 
+    </ul>
+
+    <p class="normal-text">
+        Como mencioné anteriormente, cada uno de estos ciclos tiene ciertas características que lo hacen útil para algunos casos específicos, a lo largo de los contenidos de esta sección veremos cada uno de estos al detalle, aprendiendo durante el proceso los componentes, sintaxis y esas características particulares que permiten decidir cual usar en qué momento, veremos también el concepto de contador y acumulador que parte de la existencia de los ciclos
+    </p>
+    <p class="subtitle-text">
+        Ciclo For
+    </p>
+
+    <p class="normal-text">
+        Los ciclos for son lo que se conoce como estructuras de control de flujo cíclicas o simplemente estructuras cíclicas, estos ciclos, como su nombre lo sugiere, nos permiten ejecutar una o varias líneas de código de forma iterativa, conociendo un valor especifico inicial y otro valor final, además nos permiten determinar el tamaño del paso entre cada "giro" o iteración del ciclo.
+    </p>
+    <p class="normal-text">
+        En resumen, un ciclo for es una estructura de control iterativa, que nos permite ejecutar de manera repetitiva un bloque de instrucciones, conociendo previamente un valor de inicio, un tamaño de paso y un valor final para el ciclo.
+    </p>
+
+    <p class="subtitle-text">
+        ¿Cómo funciona un Ciclo For?
+    </p>
+
+    <p class="normal-text">
+        Para comprender mejor el funcionamiento del ciclo for, pongamos un ejemplo, supongamos que queremos mostrar los números pares entre el 50 y el 100, si imaginamos un poco como seria esto, podremos darnos cuenta que nuestro ciclo deberá mostrar una serie de números como la siguiente: 50 52 54 56 58 60 ... 96 98 100. Como podemos verificar, tenemos entonces los componentes necesarios para nuestro ciclo for, tenemos un valor inicial que sería el 50, tenemos también un valor final que sería el 100 y tenemos un tamaño de paso que es 2 (los números pares). Estamos ahora en capacidad de determinar los componentes esenciales para un ciclo for.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis del Ciclo For
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">for</span> (<span style="color: rgb(255, 145, 0);">int</span> i = valor inicial; i &lt;= valor <span class="reserved-word">final</span>; i = i + paso)
+                </p>
+                <p class="code-text">
+                    {
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    Bloque de Instrucciones...
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                <p class="code-text">
+                    }
+                </p>
+                <p class="code-text">....</p>
+                <p class="code-text">Bloque de Instrucciones restante del Algoritmo....</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        En efecto los ciclos for, son bastante útiles, sin embargo desde el punto de vista de la eficiencia, es recomendable evitarlos en la medida de lo posible, siempre que vayas a usar un ciclo for, deberías preguntarte primero si es totalmente necesario o si existe una manera más efectiva de hacerlo. Evidentemente habrá situaciones en las que será casi que imprescindible usar el ciclo for, pues por algo existen. Está entonces en nuestra habilidad determinar cuándo usarlos y mejor aún cómo usarlos de manera efectiva.
+    </p>
+
+    <p class="subtitle-text">
+        Ciclo while
+    </p>
+
+    <p class="normal-text">
+        Los ciclos while son también una estructura cíclica, que nos permite ejecutar una o varias líneas de código de manera repetitiva sin necesidad de tener un valor inicial e incluso a veces sin siquiera conocer cuando se va a dar el valor final que esperamos, los ciclos while, no dependen directamente de valores numéricos, sino de valores booleanos, es decir su ejecución depende del valor de verdad de una condición dada, verdadera o falso, nada más. De este modo los ciclos while, son mucho más efectivos para condiciones indeterminadas, que no conocemos cuando se van a dar a diferencia de los ciclos for, con los cuales se debe tener claro un principio, un final y un tamaño de paso.
+    </p>
+
+    <p class="subtitle-text">
+        ¿Cómo funciona un Ciclo While?
+    </p>
+
+    <p class="normal-text">
+        Para comprender mejor el funcionamiento del ciclo while, pongamos un buen ejemplo, imaginemos que por algún motivo, queremos pedirle a un usuario una serie de números cualquiera y que solo dejaremos de hacerlo cuando el usuario ingrese un número mayor a 100. Como vemos, aquí no podríamos utilizar un ciclo for, pues no tenemos ni idea de cuándo al usuario se le va a ocurrir ingresar un número mayor que 100, es algo indeterminado para nosotros, sin embargo el ciclo while nos permite ejecutar una acción de forma infinita hasta que se cumpla alguna condición especifica, en nuestro caso sería que el numero ingresado sea mayor a 100. De modo que si el usuario nos ingresa de manera sucesiva los siguientes numero 1,50,99, 49, 21, 30, 100 ..., nuestro programa no finalizara, pues ninguno de estos números es mayor que 100, sin embargo si nos ingresara el numero 300, el programa finalizaría inmediatamente.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis del Ciclo While
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">while</span> (condición de finalización) <span class="comment">//por ejemplo numero == 100</span>
+                </p>
+                <p class="code-text">
+                    {
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    Bloque de Instrucciones...
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                <p class="code-text">
+                    }
+                </p>
+                <p class="code-text">....</p>
+                <p class="code-text">Bloque de Instrucciones restante del Algoritmo....</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        En efecto los ciclos while, son bastante útiles, sin embargo desde el punto de vista de la eficiencia al igual que con los ciclos for, es recomendable evitarlos en la medida de lo posible, siempre que vayas a usar un ciclo while o cualquier tipo de ciclo en realidad, deberías preguntarte primero si es totalmente necesario o si existe una manera más efectiva de hacerlo. Evidentemente habrá situaciones en las que será casi que imprescindible usar el ciclo, pues por algo existen, esta entonces en nuestra habilidad determinar cuándo usarlos y mejor aun como usarlos de manera efectiva.
+    </p>
+
+    <p class="subtitle-text"> Ciclo do-while</p>
+
+    <p class="normal-text">
+        Los ciclos do-while son una estructura de control cíclica, los cuales nos permiten ejecutar una o varias líneas de código de forma repetitiva sin necesidad de tener un valor inicial e incluso a veces sin siquiera conocer cuando se va a dar el valor final, hasta aquí son similares a los ciclos while, sin embargo el ciclo do-while nos permite añadir cierta ventaja adicional y esta consiste que nos da la posibilidad de ejecutar primero el bloque de instrucciones antes de evaluar la condición necesaria, de este modo los ciclos do-while, son más efectivos para algunas situaciones especificas. En resumen un ciclo do-while, es una estructura de control cíclica que permite ejecutar de manera repetitiva un bloque de instrucciones sin evaluar de forma inmediata una condición especifica, sino evaluándola justo después de ejecutar por primera vez el bloque de instrucciones
+    </p>
+
+
+    <p class="subtitle-text">
+        ¿Cómo funciona un Ciclo Do-While?
+    </p>
+
+    <p class="normal-text">
+        Para comprender mejor el funcionamiento del ciclo while, usemos de nuevo el ejemplo de la sección anterior sobre el ciclo while. Imaginemos entonces que por algún motivo, queremos pedirle a un usuario una serie de números cualquiera y que solo dejaremos de hacerlo cuando el usuario ingrese un número mayor a 100. Como vimos anteriormente, esto se puede hacer por medio de un ciclo while, pero vamos ahora a ver como lo podemos hacer usando un ciclo do-while mejorando así un poco nuestro algoritmo, evitando ciertos comandos, tal como se dijo con el ciclo while, en efecto aquí estamos en la situación de no tener ni idea de cuándo al usuario se le va a ocurrir ingresar un número mayor que 100, pues es algo indeterminado para nosotros, sin embargo el ciclo while y en efecto el do-while nos permite ejecutar cierta acción de forma infinita hasta que se cumpla alguna condición especifica, en nuestro caso sería que el numero ingresado sea mayor a 100. De modo que si el usuario nos ingresa de manera sucesiva los siguientes numero 1,50,99, 49, 21, 30, 100 ..., nuestro programa no finalizara, pues ninguno de estos números es mayor que 100, sin embargo si nos ingresara el numero 300, el programa finalizaría inmediatamente.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis del Ciclo Do-While
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">do</span>
+                </p>
+                <p class="code-text">
+                    {
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    Bloque de Instrucciones...
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                <p class="code-text">
+                    }
+                </p>
+                <p class="code-text">
+                   <span class="reserved-word">while</span>(condición de finalización); <span class="comment">//por ejemplo numero != 23</span> 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="subtitle-text">
+        Diferencias entre el ciclo do-while en C++ y el ciclo while
+    </p>
+
+    <p class="normal-text">
+        Cuando vemos por primera vez el ciclo do-while, se nos viene de inmediato la pregunta de cuál es la diferencia entre un do-while y un while. Y no quedamos muy seguros de poder saber cuándo usar uno u otro, así que aquí te explico.
+    </p>
+    <p class="normal-text">
+        La diferencia es que el do-while, primero ejecuta la acción y luego evalúa la condición, mientras que el while evalúa la condición antes que cualquier cosa. Esto quiere decir, que el ciclo while podría no ejecutar ni siquiera una vez lo que tenga en su interior, mientras que el do-while te asegura que lo que pongas dentro se ejecute mínimo una vez, pues primero ejecuta y luego evalúa la condición.
+    </p>
+    <p class="subtitle-text">
+        Conclusiones sobre el ciclo do-while en C++
+    </p>
+    <p class="normal-text">
+        En efecto, los ciclos do-while son bastante útiles. Sin embargo, como con cualquier ciclo desde el punto de vista de la eficiencia al igual que con los ciclos for, es recomendable evitarlos en la medida de lo posible, siempre que vayas a usar un ciclo do-while o cualquier tipo de ciclo en realidad, deberías preguntarte primero si es totalmente necesario o si existe una manera más efectiva de hacerlo. Evidentemente habrá situaciones en las que será casi que imprescindible usar el ciclo, pues por algo existen, está entonces en nuestra habilidad determinar cuándo usarlos y mejor aun como usarlos de manera efectiva.
+    </p>
+
+    <div class="back-next">
+        <a href="Teoria2.html">
+            <button class="next-button">
+                &lt;&lt; Atras
+            </button>
+        </a>
+        <a href="Teoria4.html">
+            <button class="next-button">
+                Siguiente &gt;&gt;
+            </button>
+        </a> 
+    </div>
+
+    </div>
+    
+</body>
+</html>

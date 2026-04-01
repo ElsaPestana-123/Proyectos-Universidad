@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Teoria.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title>Tema 6: Programacion Orientada a Objetos</title>
+</head>
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="Iconos/algobyte-logo.png" alt="AlgoByte logo">
+        </div>
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="Iconos/C++_Logo.svg" alt="AlgoByte logo">
+        </div>
+        <div class="upper-profile">
+            <a href="Perfil.html">
+                <button class="upper-profile-text-button">
+                    Ver Perfil
+                </button>
+            </a>
+            <a href="Perfil.html">
+                <button class="upper-profile-button">
+                    <img class="upper-profile-image" src="Perfil/kirby.jpg" alt="kirby pfp">
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="left-sidebar">
+        <div>
+            <a href="Clases.html">
+                <button class="icon-button">
+                    <img class="icon-image" src="Iconos/home (1).png" alt="icono casa">
+                    <p class="icon-text">Inicio</p>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <p class="title-text">
+       Programacion Orientada a Objetos
+    </p>
+
+    <p class="normal-text">
+        Para entender cómo funciona la programación orientada a objetos en C, primero hay que hacerse la pregunta: ¿qué es exactamente la programación orientada a objetos (OOP)? La programación orientada a objetos es un estilo de programación muy extendido, manifestación del paradigma de programación imperativo. Se puede distinguir la programación orientada a objetos de la programación declarativa y su especialización, la programación funcional.
+    </p>
+    <p class="normal-text">
+        La idea básica de la programación orientada a objetos es modelar objetos y dejar que interactúen entre sí. El flujo del programa resulta de las interacciones de los objetos y, por tanto, solo se fija en tiempo de ejecución. En esencia, la OOP comprende solo tres propiedades:
+    </p>
+    <p class="normal-text">
+        <ul class="normal-text">
+            <strong>&#183;</strong> Los objetos encapsulan su estado interno.
+         </ul>
+         <ul class="normal-text">
+             <strong>&#183;</strong> Los objetos reciben mensajes a través de sus métodos. 
+         </ul>
+         <ul class="normal-text">
+             <strong>&#183;</strong> Los métodos se asignan dinámicamente en tiempo de ejecución.
+         </ul>
+    </p>
+    <p class="normal-text">
+        Un objeto en un lenguaje de programación orientada a objetos puro como Java es una unidad autocontenida. Comprende una estructura de datos de cualquier complejidad, así como métodos (funciones) que operan sobre ella. El estado interno del objeto, representado en los datos que contiene, solo puede leerse y modificarse usando estos métodos. Para la gestión de la memoria de los objetos se suele utilizar una función del lenguaje llamada “Garbage Collector”.
+    </p>
+    <p class="subtitle-text">
+        Modelar objetos como estructuras de datos
+    </p>
+
+    <p class="normal-text">
+        Descubre primero cómo puede modelarse en C++ la estructura de datos de un objeto al estilo de los lenguajes de programación orientada a objetos. C es un lenguaje compacto que funciona con pocas construcciones lingüísticas. Para crear estructuras de datos arbitrariamente complejas, se utilizan los llamados “structs”, cuyo nombre deriva del término “estructura de datos”, o “Data Structure” en inglés.
+    </p>
+    <p class="normal-text">
+        Una struct-C define una estructura de datos que incluye campos llamados “miembros”. En otros lenguajes, una construcción de este tipo también se denomina “registro”, por lo que bien se puede imaginar una struct como la fila de una tabla de una base de datos: un compuesto de varios campos, posiblemente de distintos tipos.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis de declaracion de un Struct
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">struct</span> <span style="color: rgb(255, 0, 0);">struct_name</span>;
+                </p>
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">struct</span> <span style="color: rgb(255, 0, 0);">point</span>
+                </p>
+                <p class="code-text">
+                    {
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">int</span> x;
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">int</span> y;
+                </p>
+                <p class="code-text">
+                    };
+                </p>
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="variable"> point</span> origen; <span class="comment">// Declaracion de objeto </span>
+                </p>
+                <p class="code-text">
+                    origen.x = <span class="variable">10</span>; <span class="comment">// Asignacion a miembro struct </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        En lenguajes de programación orientada a objetos, como Java y Python, los objetos incluyen, además de sus datos, las funciones que operan sobre ellos. Se llaman métodos o métodos de instancia. Cuando se escribe un código de OOP en C, en lugar de métodos se utilizan funciones que toman un puntero a una instancia de struct:
+    </p>
+
+    <p class="subtitle-text">
+        Encapsulamiento
+    </p>
+
+    <p class="normal-text">
+        En la programación clásica (lenguaje C, p.e.) existen datos y procedimientos que actúan sobre esos datos. No hay una relación aparente entre datos y procedimientos (funciones) y esta relación se establece de manera más o menos pecisa de acuerdo a la profesionalidad del programador.
+    </p>
+
+    <p class="normal-text">
+        En un objeto podemos distinguir dos aspectos bien diferenciados:
+    </p>
+
+    <p class="normal-text">
+        &#183; Estado ---------> Propiedades
+    </p>
+    <p class="normal-text">
+        &#183; Comportamiento ---> Métodos
+    </p>
+
+    <p class="normal-text">
+        En P.O.O. los datos y los procedimientos que los gestionan están relacionados explícitamente y se "encapsulan" en un objeto. La especificación de las propiedades de un objeto y los métodos de acceso se realiza en la declaración de la clase de la que se instancia el objeto.
+    </p>
+
+    <p class="normal-text">
+        La declaración de propiedades y métodos de los objetos de la clase point se realiza de la siguiente manera:
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Declaracion de propiedades y metodos
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">class</span> <span style="color: rgb(255, 0, 0);">point</span>
+                </p>
+                <p class="code-text">
+                    {
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    public:
+                </p>
+                <p class="code-text" style="text-indent: 30px;"> 
+                    <span class="reserved-word">int</span> x; <span class="comment">// Propiedades </span>
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">int</span> y;
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">void</span> getXPoint(); <span class="comment">// Metodos </span>
+                </p>
+                <p class="code-text">
+                    };
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="subtitle-text">
+        Constructores y Destructores
+    </p>
+    <p class="normal-text">
+        Son métodos que permiten establecer el estado inicial y final de un objeto. Los constructores se pueden definir con un conjunto de argumentos arbitrario, pero no pueden devolver nada. Y los destructores no pueden recibir ni devolver ningún valor.
+    </p>
+    <p class="normal-text">
+        El constructor debe llamarse igual que la clase, y el destructor el nombre de la clase precedido del carácter ~
+    </p>
+    <p class="normal-text">
+        Un constructor se ejecuta cuando se crea un nuevo objeto: 1) por declaración, ó 2) cuando se crea dinámicamente con el operador new. Un destructor se ejecuta cuando el objeto deja de existir: 1) porque su ámbito acaba, ó 2) cuando se libera explícitamente con el operador delete.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Constructores y Destructores
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">class</span> <span style="color: rgb(255, 0, 0);">point</span>
+                </p>
+                <p class="code-text">
+                    {
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    .....
+                </p>
+                <p class="code-text" style="text-indent: 30px;"> 
+                    <span class="comment">// Constructor de objetos point </span>
+                </p>
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">point</span> (int x, int y);
+                </p>
+                <p class="code-text" style="text-indent: 30px;"> 
+                    <span class="comment">// El destructor seria ~point(); </span>
+                </p>
+                <p class="code-text" style="text-indent: 15px;">
+                    .....
+                </p>
+                <p class="code-text">
+                    };
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="subtitle-text">
+        Herencia
+    </p>
+
+    <p class="normal-text">
+        Cuando una clase hereda de otra, la clase derivada incorpora todos los miembros de la clase base además de los suyos propios.
+    </p>
+    <p class="normal-text">
+        La herencia es una herramienta muy importante en muchos aspectos del desarrollo de aplicaciones:
+    </p>
+
+    <p class="normal-text">
+        &#183; Organización del diseño.
+    </p>
+    <p class="normal-text">
+        &#183; Reusabilidad de clases (propias o no).
+    </p>
+    <p class="normal-text">
+        &#183; Mejora del mantenimiento.
+    </p>
+
+    <p class="subtitle-text">
+        Polimorfismo
+    </p>
+
+    <p class="normal-text">
+        El polimorfismo te permite tener diferentes implementaciones de una misma función para diferentes tipos de objetos.
+    </p>
+    <p class="subtitle-text">
+        Conclusiones
+    </p>
+    <p class="normal-text">
+        La POO es un paradigma de programación fundamental para escribir código modular, reutilizable y fácil de mantener. Al comprender los fundamentos de la POO en C++ y las mejores prácticas para su uso, podrás aprovechar al máximo este poderoso paradigma para escribir código C++ robusto y efectivo.
+    </p>
+
+    <div class="quiz">
+        <a href="Quiz3c++.html">
+            <button class="quiz-button">
+                Presentar quiz
+            </button>
+        </a>
+    </div>
+
+    <div class="back-next">
+        <a href="Teoria5.html">
+            <button class="next-button">
+                &lt;&lt; Atras
+            </button>
+        </a>
+    </div>
+    
+</body>
+</html>

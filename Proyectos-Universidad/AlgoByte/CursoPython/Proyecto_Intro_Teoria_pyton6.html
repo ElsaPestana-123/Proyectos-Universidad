@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Teoria.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title>Contenido Teorico</title>
+</head>
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="AlgoByte.jpg" alt="AlgoByte logo">
+        </div>
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="python-logo.svg" alt="AlgoByte logo">
+        </div>
+        <div class="upper-profile">
+            <button class="upper-profile-text-button">
+                Ver Perfil
+            </button>
+            <button class="upper-profile-button">
+                <img class="upper-profile-image" src="foto_perfil.jpg" alt="kirby pfp">
+            </button>
+        </div>
+    </div>
+    <div class="left-sidebar">
+        <div>
+            <button class="icon-button">
+                <img class="icon-image" src="home1.svg" alt="icono casa">
+                <p class="icon-text">Inicio</p>
+            </button>
+        </div>
+    </div>
+
+    <p class="title-text">
+        Lee y escribe información en archivos usando
+    </p>
+
+    <p class="normal-text">
+        Una de las funcionalidades que tiende a hacerse compleja en múltiples 
+        lenguajes de programación es la lectura y escritura de archivos de texto. 
+        Sin embargo, en Python es una tarea bastante sencilla (como es usual en Python), 
+        por medio de las funciones print() y write() para escribir en 
+        archivos y open() para leerlos.
+    </p>
+
+    <p class="subtitle-text">
+        Creando y leyendo un archivo con open()
+    </p>
+
+    <p class="normal-text">
+        La función open() en Python, nos permite abrir un archivo existente. 
+        Sin embargo, si no existen lo creará inmediatamente. Cabe resaltar, que 
+        al "abrir" un archivo, lo estamos preparando para su lectura, de modo 
+        que podremos acceder a su contenido (si lo tiene) e incluso, una vez 
+        abierto, podríamos escribir en él. Su uso es el siguiente:
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Ejemplo
+            </p>
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    Contenido = <span class="variable">open</span> <span class="reserved-word">("nombre-del-archivo.txt", "modo")</span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        En el código anterior, la variable "contenido" tendrá todas las líneas que 
+        compongan al archivo y las podremos recorrer con un ciclo for.Por otro lado, 
+        open() recibe entonces el nombre del archivo como primer parámetro y el 
+        modo que se usará para abrir ese archivo.
+    </p>
+
+    <p class="normal-text">
+        Existen varios modos para abrir los archivos, así que exploremos los más comunes:
+    </p>
+
+    <p class="normal-text">
+        1. <span class="variable">r:</span> Abre el archivo en modo de solo lectura. 
+        Es decir, no lo podremos modificar, solo obtener y usar sin contenido sin realizar 
+        cambio alguno. Si el archivo no existe, el programa fallará.
+    </p>
+
+    <p class="normal-text">
+        2. <span class="variable">r+:</span> Abre el archivo en modo lectura y escritura. 
+        Pudiendo así no solo obtener y usar su contenido, sino modificarlo si se desea.
+    </p>
+
+    <p class="normal-text">
+        3. <span class="variable">w:</span> Abre el archivo en solo modo escritura. 
+        Va a sustituir el archivo original si existe antes o crear uno nuevo si no existe. 
+        Quiere decir entonces, que el contenido original que tenga ese archivo se perderá 
+        una vez escribas en él.
+    </p>
+
+    <p class="normal-text">
+        4. <span class="variable">a:</span> Abre el archivo para escritura, pero permitiendo 
+        agregar contenido al existente. Esto quiere decir que el contenido original se 
+        conserva y lo que escribas se agregará al final del archivo. Si el archivo no existe, 
+        se crea uno nuevo.
+    </p>
+
+    <p class="normal-text">
+        5. <span class="variable">a+:</span> Abre el archivo en modo de escritura para 
+        agregar contenido y lectura, permitiendo así agregar contenido al final y 
+        leerlo también.
+    </p>
+
+    <p class="normal-text">
+        De ese modo, si quieres pasar contenido a un archivo sin eliminar el contenido 
+        original y además agregarle contenido, usas el modo a+. Si solo necesitas leer 
+        su contenido y nada más, entonces usar r, así:
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Ejemplo
+            </p>
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    Contenido = <span class="variable">open</span> <span class="reserved-word">("nombre-del-archivo.txt", "a+")</span> <span class="comment">## Agregarás contenido y lo podrás leer</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    Contenido = <span class="variable">open</span> <span class="reserved-word">("nombre-del-archivo.txt", "r")</span> </span> <span class="comment">## Solo podrás leer el contenido</span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        Es importante notar, que la ruta hacia el archivo, se calcula desde la raíz de tu programa 
+        Python. De ese modo, tu archivo se creará o se leerá desde allí, a menos que indiques 
+        una ruta diferente, como "ruta/hacia/el/archivo.txt", teniendo así varias subcarpetas donde 
+        se ubicaría tu archivo. Es importante tener en cuenta que las subcarpetas para tu programa 
+        deben existir antes de intentes usar el archivo, pues Python no las va a crear por ti.
+    </p>
+
+    <p class="subtitle-text">
+        ¿Cómo leer un archivo y mostrar su contenido? 
+    </p>
+
+    <p class="normal-text">
+        Veamos entonces cómo usar open() para abrir un archivo y recorrer su contenido 
+        para mostrarlo en pantalla:
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Ejemplo
+            </p>
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    Contenido = <span class="variable">open</span> <span class="reserved-word">("nombre-del-archivo.txt", "r")</span> <span class="comment">## Abrimos en modo solo lectura</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    contador = 1
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">for</span> línea <span class="variable"> in </span> contenido: </span> <span class="comment">## Solo podrás leer el contenido</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">print</span> ("Línea", contador, ":", línea)
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    contador += 1
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <p class="subtitle-text">
+        Escribiendo en archivos 
+    </p>
+
+    <p class="normal-text">
+        Como indiqué al comienzo, hay dos formas de escribir contenido en archivos con Python, 
+        así que veamos ambas. Cabe resaltar que, en ambos casos, necesitamos abrir el archivo 
+        en modo de escritura, ya sea con w, r+, a o a+.
+    </p>
+
+    <p class="subtitle-text">
+        Cómo escribir en un archivo usando write() 
+    </p>
+
+    <p class="normal-text">
+        La función write(), la podemos usar para escribir en un archivo ya abierto y nos 
+        recibe solo el texto (string) que vayamos a agregar. Veamos cómo escribir una lista 
+        de nombre en un archivo:
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Ejemplo
+            </p>
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    nombres = [ <span class="reserved-word">"Juan", "Susana", "Andrea", "Melanie", "Andrés"</span> ] <span class="comment">## La lista de nombres a escribir</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    archivo = <span class="variable"> open("nombres.txt", "w") </span> <span class="comment">## Abrimos en modo escritura</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word"> for </span> nombre <span class="reserved-word"> in </span> nombres: <span class="comment">## Recorremos la lista y agregamos cada nombre al archivo</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    archivo.write(nombre + "\n")
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    archivo.close() <span class="comment">## Muy importante cerrar el archivo.</span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        En el código anterior, hay varias cosas por notar:
+    </p>
+
+    <p class="normal-text">
+        1. ¡Muy importante! Debes cerrar el archivo que estuviste escribiendo con close(). 
+        Eso permitirá que el contenido sea finalmente escrito en el archivo (de lo contrario quedará vacío) 
+        y además que se pueda liberar el archivo para ser usado luego (o incluso eliminado).
+    </p>
+
+    <p class="normal-text">
+        2. La función write() no agrega saltos de línea, así que debemos ponerlos con "\n" 
+        para cada línea que deseamos escribir en el archivo.
+    </p>
+
+    <p class="normal-text">
+        3. El archivo debe abrirse en alguno de los modos de escritura y primero debe abrirse con 
+        open(), antes de poder llamar a write y escribir en él.
+    </p>
+
+    <p class="subtitle-text">
+        Escribiendo en un archivo con Python usando print()
+    </p>
+
+    <p class="normal-text">
+        Ahora, exploremos otro modo de escribir en un archivo, esta vez, usando print(). 
+        Notarás que es la misma función con la cual mostramos mensajes por pantalla. Sin 
+        embargo, podemos usarla para imprimir valores en un archivo con el parámetro "file" 
+        y sacando ventaja de su funcionamiento habitual (saltos de línea, espacios y demás).
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Ejemplo
+            </p>
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    nombres = [ <span class="reserved-word">"Juan", "Susana", "Andrea", "Melanie", "Andrés"</span> ] <span class="comment">## La misma lista de nombres a escribir</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    archivo = <span class="variable"> open("nombres.txt", "w") </span> <span class="comment">## Abrimos en modo escritura</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word"> for </span> nombre <span class="reserved-word"> in </span> nombres: <span class="comment">## Recorremos la lista y agregamos cada nombre al archivo</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">print</span> (nombre, file=archivo)
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    archivo.close() <span class="comment">## NO olvides cerrar el archivo</span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        Si ejecutas el código anterior en Python, verás que el funcionamiento es el mismo. 
+        Sin embargo, al usar la función print() nos evitamos poner el salto de línea "\n", p
+        ues print() lo hace automáticamente en cada llamado. Además, como vemos, lo único que 
+        hace falta para imprimir en el archivo, es usar el parámetro file, indicando el archivo 
+        que ya tenemos abierto para escritura.
+    </p>
+
+
+    <div class="back-next">
+        <a href="">
+            <button class="next-button">
+                &lt;&lt; Atras
+            </button>
+        </a>
+        <a href="">
+            <button class="next-button">
+                Siguiente &gt;&gt;
+            </button>
+        </a> 
+    </div>
+
+</body>
+</html>

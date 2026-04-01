@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Teoria.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title>Contenido Teorico</title>
+</head>
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="AlgoByte.jpg" alt="AlgoByte logo">
+        </div>
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="python-logo.svg" alt="AlgoByte logo">
+        </div>
+        <div class="upper-profile">
+            <button class="upper-profile-text-button">
+                Ver Perfil
+            </button>
+            <button class="upper-profile-button">
+                <img class="upper-profile-image" src="foto_perfil.jpg" alt="kirby pfp">
+            </button>
+        </div>
+    </div>
+    <div class="left-sidebar">
+        <div>
+            <button class="icon-button">
+                <img class="icon-image" src="home1.svg" alt="icono casa">
+                <p class="icon-text">Inicio</p>
+            </button>
+        </div>
+    </div>
+
+    <p class="title-text">
+        Estructuras de datos
+    </p>
+
+    <p class="normal-text">
+        Las estructuras de datos en Python se pueden entender como un tipo de dato compuesto, debido 
+        a que en una misma variable podemos almacenar una estructura completa con información. 
+        Dichas estructuras, pueden tener diferentes características y funcionalidades. De hecho, existen 
+        múltiples tipos de estructuras de datos en Python
+    </p>
+
+    <p class="normal-text">
+        Las estructuras de datos más comunes en Python son las listas, las tablas y los diccionarios. 
+        Aunque tienen otro nombre, en otros lenguajes, son los arreglos o vectores, las matrices y los 
+        arreglos indexados, respectivamente. Son en esencia lo mismo, aunque como es habitual en 
+        Python, con varias facilidades y funcionalidades ya incluidas. Ahora los veremos detalladamente.
+    </p>
+
+    <p class="subtitle-text">
+        Listas (arrays, arreglos o vectores)
+    </p>
+    
+    <p class="normal-text">
+        Las listas, son una estructura de datos de vital importancia, pues son útiles 
+        para resolver múltiples problemas que nunca podríamos solucionar sin ellas. Las listas 
+        en Python son utilizadas para almacenar múltiples valores en una única variable. Esto 
+        puede parecer innecesario, pero en realidad resuelve muchos desafíos. En múltiples 
+        ocasiones es necesario almacenar gran cantidad de información en una variable y a 
+        menudo sucede que no conocemos con exactitud la cantidad de datos que debemos almacenar 
+        en ella. Sin embargo, sabemos que sí sería más de uno, como por ejemplo almacenar los
+        nombres de las personas ingresadas en tu programa. En este caso, las listas nos 
+        permiten solucionar este tipo de problemas, pues en una misma lista podremos almacenar 
+        todos esos valores, sin importar cuántos sean.
+    </p>
+    
+    <p class="subtitle-text">
+        ¿Cómo declarar una lista en Python?
+    </p>
+
+    <p class="normal-text">
+        Para declarar una lista en Python, se deben seguir las mismas normas básicas que se 
+        siguen para declarar una variable cualquiera, con un pequeño cambio en la sintaxis:
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis de la lista
+            </p>
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    nombre_de_la_lista = []
+                </p>
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    otra_lista = list()
+                </p>
+            
+            </div>
+        </div>
+    </div>
+    
+    <p class="subtitle-text">
+        Obtener el valor de un elemento de una lista en Python
+    </p>
+
+    <p class="normal-text">
+        Es muy común el caso en el que tenemos una lista con una enorme
+        cantidad de elementos, sin embargo, de todos esos elementos solo 
+        nos interesa uno en especial y corremos con la suerte de saber
+        cuál es su valor o mejor aún su posición específica dentro de 
+        la lista.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    mi_lista = [<span class="variable">Juan,</span> 
+                    <span class="variable">Pedro,</span> 
+                    <span class="variable">Laura,</span> 
+                    <span class="variable">Carmen,</span>
+                    <span class="variable">Susana,</span>]
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">print</span>(mi_lista[0]) <span class="comment">## Muestra Juan </span>;
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">print</span>(mi_lista[-1]) <span class="comment"># Muestra Susana </span>;
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">print</span>(mi_lista[1])  <span class="comment"># Muestra Pedro </span>;
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">print</span>(mi_lista[2])  <span class="comment"># Muestra Laura </span>;
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">print</span>(mi_lista[-2])  <span class="comment"># Muestra Carmen </span>;
+                </p>
+            
+            </div>
+        </div>
+    </div>
+    
+    <p class="normal-text">
+        Acá hay varias cosas por entender. Así que veámoslas de una en una:
+    </p>
+
+    <p class="normal-text">
+        1.Puedes acceder a una posición usando el nombre de la variable y corchetes "[]" 
+        indicando en su interior el índice que quieres obtener.
+    </p>
+
+    <p class="normal-text">
+        2.Las posiciones de las listas arrancan enumeradas desde cero, así la primera 
+        posición se accede como [0] y la última sería el tamaño total menos 1.
+    </p>
+
+    <p class="normal-text">
+        3.Se pueden usar índices negativos, así accediendo a los elementos de la lista 
+        contando dese atrás. Así un modo sencillo de obtener el último elemento es con [-1]
+    </p>
+
+    <p class="normal-text">
+        4.Si accedes a un índice que no existe, el programa fallará.
+    </p>
+
+    <p class="subtitle-text">
+        Recorrer una lista en Python
+    </p>
+
+    <p class="normal-text">
+        En este caso, los ciclos vienen de gran ayuda. El caso general, sería hacerlo 
+        por medio de un ciclo for que vaya accediendo uno por uno a los elementos o 
+        incluso aumentando de uno en uno el índice que queremos acceder de la lista.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    Edades = [20,41, 6, 18, 23]
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">for</span> edad <span class="reserved-word">in</span>  edades: <span class="comment"># Recorrido de los elementos </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (edad)
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">for</span> i <span class="reserved-word">in</span>  range(len(edades)): <span class="comment"># Recorriendo los indices </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (edades[i])
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    indice = 0 <span class="comment"># Con While y los índices </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text">
+                 <span class="reserved-word">While</span> indice < len(edades):
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (edades[indices])
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    indice += 1
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        Como puedes ver, el ciclo for puede acceder directamente a los elementos y recorrerlos 
+        uno por uno. Sin embargo, a veces puedes necesitar los índices y también puedes acceder 
+        a cada elemento por medio de ese índice ya sea usando un ciclo for o incluso un while 
+        con un contador.
+    </p>
+
+    <p class="subtitle-text">
+        Tablas (matrices o listas de listas)
+    </p>
+
+    <p class="normal-text">
+        Las tablas en Python forman parte de lo que se conoce como estructuras de datos que nos 
+        ofrece Python. Cabe resaltar que, si has programado en otros lenguajes, las tablas no 
+        son más que lo que se conoce como matrices o listas de listas en otros lenguajes de programación.
+        Las tablas, son una estructura de datos de vital importancia, pues son útiles para 
+        resolver múltiples problemas que no podríamos solucionar sin ellas. Las tablas son 
+        utilizadas para almacenar múltiples valores en una única variable. De hecho, al final 
+        se trata de una lista que contiene otras listas en su interior.
+    </p>
+
+    <p class="subtitle-text">
+        ¿Cómo crear una tabla?
+    </p>
+
+    <p class="normal-text">
+        Para declarar una tabla en Python, se deben seguir las mismas normas básicas 
+        que se siguen para declarar una lista, teniendo en cuenta que contendrá listas 
+        en su interior:
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis de la tabla
+            </p>
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    nombre_de_la_tabla = []
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    nombre_de_la_tabla = [[],[]] <span class="comment"># Tambien se puede iniciar la lista en el interior </span>
+                </p>
+            
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        Una vez la tabla es creada, podemos agregarle elementos, quitarlos, obtenerlos, y varias 
+        cosas más, tal como hacemos con la listas tradicionales.
+    </p>
+
+    <p class="subtitle-text">
+        Obtener el valor de un elemento de una tabla 
+    </p>
+
+    <p class="normal-text">
+        Es muy común el caso en el que tenemos una tabla con una enorme cantidad de elementos, 
+        sin embargo, de todos esos elementos solo nos interesa uno en especial y corremos con la 
+        suerte de saber cuál es su valor o mejor aún su posición específica dentro de la tabla. Con 
+        posición me refiero a la fila y a la columna. Es decir la lista que contiene el 
+        elemento en su interior (fila) y luego el elemento específico en esa lista (columna).
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    mi_tabla = [[<span class="reserved-word">Juan,</span> <span class="reserved-word">Laura</span>],[21, 32]]
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (mi_tabla[0][0]) <span class="comment"># Muestra Juan (la primera posición es la 0,0) </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (mi_tabla[-1][1]) <span class="comment"># Muestra 32 (última fila, segunda columna) </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (mi_tabla[1][0]) <span class="comment"># Muestra 21</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (mi_tabla[0][1]) <span class="comment"># Muestra Laura</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (mi_tabla[0]) <span class="comment"># Muestra la lista con nombres</span>
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <p class="normal-text">
+        1. Puedes acceder a una posición usando el nombre de la variable y corchetes "[]" indicando en 
+        su interior el índice que quieres obtener.
+
+        2. Ahora se usan corchetes para cada lista. El primer conjunto de corchetes accede a la 
+        lista, el segundo a una posición de esa lista.
+    </p>
+
+    <p class="subtitle-text">
+        Recorrer una tabla
+    </p>
+
+    <p class="normal-text">
+        En este caso, los ciclos vienen de gran ayuda. El caso general, sería hacerlo por medio de un 
+        ciclo for que vaya accediendo uno por uno a los elementos o incluso aumentando de uno en uno 
+        el índice que queremos acceder de la tabla, tanto para la fila como para la columna.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    mi_tabla = [[Juan, Laura], [21, 32]] 
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    ....... <span class="comment">#Recorrido de los elementos </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">for</span> fila <span class="reserved-word">in</span> mi_tabla <span class="comment"># Accedemos a cada fila (que es una lista) </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">for</span> columna <span class="reserved-word">in</span> fila <span class="comment"># Accedemos a cada columna dentro de la fila </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (columna)
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    ....... <span class="comment">#Recorriendo los índices </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">for</span> i <span class="reserved-word">in</span>  range(len(mi_tabla)): <span class="comment"># i serían las filas </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">for</span> j <span class="reserved-word">in</span>  range(len(mi_tabla[i])): <span class="comment"># i serían las filas </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (mi_tabla[i][j])
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    fila = 0 <span class="comment">#Con While y los índices </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text">
+                 <span class="reserved-word">While</span> fila < len(mi_tabla[fila]):
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (mi_tabla[fila][columna])
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    columna += 1
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    fila += 1
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        Como puedes ver, el ciclo for puede acceder directamente a los elementos y recorrerlos uno por uno. 
+        Sin embargo, a veces puedes necesitar los índices y también puedes acceder a cada elemento por medio de 
+        ese índice ya sea usando un ciclo for o incluso un while con un contador.
+    </p>
+
+    <p class="subtitle-text">
+        Diccionarios (listas asociativas)
+    </p>
+
+    <p class="normal-text">
+        Los diccionarios en Python forman parte de lo que se conoce como estructuras de datos que nos ofrece Python. 
+        Cabe resaltar que, si has programado en otros lenguajes, los diccionarios no son más que listas asociativas 
+        o listas con llaves, donde cada llave es un identificador único de una posición de la lista. Básicamente, en 
+        lugar de usar números de 0 a N, se usan llaves que pueden ser strings generalmente.
+
+        En general, la lógica es la misma que se maneja en las listas y su propósito es el mismo. Sin embargo, los 
+        diccionarios en Python nos permiten organizar e identificar de manera única las posiciones de la lista, usando 
+        lo que se conoce como llaves.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Sintaxis del Diccionario
+            </p>
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    nombre_del_diccionario = {}
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    otro_diccionario ={ <span class="comment"># Tambien se puede iniciar la lista en el interior </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    "nombre": "Alberto",
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    "usuario": "alb_123",
+                </p>
+            
+            </div>
+        </div>
+    </div>
+
+    <p class="subtitle-text">
+        Obtener el valor de un elemento de un diccionario 
+    </p>
+
+    <p class="normal-text">
+        Es muy común el caso en el que tenemos un diccionario con una enorme cantidad de elementos, 
+        sin embargo, de todos esos elementos solo nos interesa uno en especial y corremos con la suerte 
+        de saber cuál es su valor o mejor aún su llave específica dentro del diccionario.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    mi_diccionario= { 
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">"nombre":"Juan",</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">"usuario": "jn123",</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    }
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (mi_diccionario[ <span class="reserved-word">"nombre"]),</span> <span class="comment"># Muestra Juan</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (mi_diccionario[ <span class="reserved-word">"usuario"]),</span> <span class="comment"># Muestra jn123</span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    
+    <p class="normal-text">
+        En esencia, la manera de acceder es la misma que se usaba en las listas, es decir, usando corchetes "[]". 
+        Sin embargo, ahora en lugar de indicar un índice numérico, indicas la llave del diccionario.
+    </p>
+
+    <p class="subtitle-text">
+        Recorrer un diccionario
+    </p>
+
+    <p class="normal-text">
+        En este caso, los ciclos vienen de gran ayuda. El caso general, sería hacerlo por medio de un 
+        ciclo for que vaya accediendo uno por uno a los elementos o incluso aumentando de uno en uno 
+        el índice que queremos acceder del diccionario, tanto para la fila como para la columna.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            
+            <div class="code-example">
+                
+                <p class="code-text" style="text-indent: 30px;">
+                    mi_diccionario= { 
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">"nombre":"Juan",</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="reserved-word">"usuario": "jn123",</span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    }
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    .......
+                </p>
+
+                <p class="code-text" style="text-indent: 15px;">
+                    <span class="reserved-word">for</span> llave in mi_diccionario: <span class="comment"># Recorriendo los elementos </span>
+                </p>
+
+                <p class="code-text" style="text-indent: 30px;">
+                    <span class="variable">print</span> (llave, <span class="reserved-word"> ": ",</span> mi_diccionario[llave], sep='')
+                </p>
+
+            </div>
+        </div>
+    </div>
+    
+    <p class="normal-text">
+        Como puedes ver, con el ciclo for puede recorrer una por una las llaves del diccionario y 
+        luego usar esa llave para mostrar el valor asignado a la misma dentro del diccionario.
+    </p>
+
+    <div class="back-next">
+        <a href="">
+            <button class="next-button">
+                &lt;&lt; Atras
+            </button>
+        </a>
+        <a href="">
+            <button class="next-button">
+                Siguiente &gt;&gt;
+            </button>
+        </a> 
+    </div>
+
+</body>
+</html>

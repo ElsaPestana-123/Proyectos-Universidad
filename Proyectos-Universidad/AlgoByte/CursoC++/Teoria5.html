@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Teoria.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title>Tema 5: Estructuras de Datos Basicas</title>
+</head>
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="Iconos/algobyte-logo.png" alt="AlgoByte logo">
+        </div>
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="Iconos/C++_Logo.svg" alt="AlgoByte logo">
+        </div>
+        <div class="upper-profile">
+            <a href="Perfil.html">
+                <button class="upper-profile-text-button">
+                    Ver Perfil
+                </button>
+            </a>
+            <a href="Perfil.html">
+                <button class="upper-profile-button">
+                    <img class="upper-profile-image" src="Perfil/kirby.jpg" alt="kirby pfp">
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="left-sidebar">
+        <div>
+            <a href="Clases.html">
+                <button class="icon-button">
+                    <img class="icon-image" src="Iconos/home (1).png" alt="icono casa">
+                    <p class="icon-text">Inicio</p>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <p class="title-text">
+       Estructuras de Datos Basicas
+    </p>
+
+    <p class="subtitle-text">
+        Arrays, arreglos y vectores
+    </p>
+
+    <p class="normal-text">
+        Los vectores son un tipo de array (arreglos). Son, de hecho, un array de una sola dimensión y forman parte de la amplia variedad de estructuras de datos que nos ofrece C++, siendo además una de las principales y más útiles estructuras que podremos tener como herramienta de programación. Los vectores o arrays o arreglos de una dimensión (como los quieras llamar), son utilizados para almacenar múltiples valores en una única variable. En un aspecto más profundo, este tipo de arrays (vectores), permiten almacenar muchos valores en posiciones de memoria continuas, lo cual permite acceder a un valor u otro de manera rápida y sencilla. Estos valores pueden ser números, letras o cualquier tipo de variable que deseemos incluso tipos de datos complejos.
+    </p>
+    <p class="normal-text">
+        En múltiples ocasiones es necesario almacenar gran cantidad de información en una variable y a menudo sucede que no conocemos con exactitud la cantidad de datos que debemos almacenar, pero sabemos que sí sería más de uno, como por ejemplo almacenar las identificaciones de las personas ingresadas al sistema. Los vectores, arreglos (arrays) de una dimensión (ya sabes cómo es) son una estructura que nos permite solucionar este tipo de problemas. Para explicar mejor de lo que hablo, pongamos un ejemplo:
+    </p>
+
+    <p class="subtitle-text">
+        Ejemplo de arrays de una dimensión o Vectores
+    </p>
+
+    <p class="normal-text">
+        Imaginemos que queremos crear un programa con el cual podamos de algún modo almacenar los títulos y los autores de diferentes libros. El usuario es el encargado de suministrar la información de cada libro, así entonces, dado que es el usuario quien lo hace, nosotros no tenemos manera alguna de saber cuántos libros va querer él ingresar por medio de nuestro programa. El caso principal es que queremos almacenar en la memoria el titulo y el autor de TODOS y cada uno de los libros. Entonces ¿cómo crees que podrías hacer esto? Con lo que sabemos hasta hora, se nos podrían ocurrir un par de cosas.
+    </p>
+    <p class="normal-text">
+        Dado que un array, arreglo unidimensional o vector es capaz de almacenar múltiples valores en una misma variable, tenemos el elemento perfecto para almacenar la información de todos los libros, podremos crear un vector de un tamaño cualquiera capaz de contener en sí los nombres de los autores y otro con los títulos de los libros o alternativamente podríamos crear una matriz de dos columnas que contenga en la primera columna los autores y en la segunda los títulos; ambas soluciones son validas y vamos a ver ambas, usando vectores en esta sección y usando matrices en la sección de matrices.
+    </p>
+
+    <p class="normal-text">
+        Nota: En C++, a diferencia de algunos otros lenguajes de programación, los vectores y las matrices presentan un "inconveniente" con el tamaño. Es decir, no es posible crear de una manera sencilla un vector capaz de almacenar una cantidad de información indefinida, es necesario ingresar con antelación la cantidad de datos (tamaño) que el vector o la matriz tendrá. Este problema se puede solucionar, pero es algo que no veremos en esta sección. Si buscas cómo crear vectores de tamaño dinámico o matrices de tamaño dinámico, te recomiendo ver la sección de Punteros en C++. No te recomiendo ver esa sección sin antes haber entendido esta.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Declaración de un Array unidimensional o Vector en C++
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">int</span> my_vector1[<span class="variable">10</span>];
+                </p>
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">float</span> my_vector2[<span class="variable">10</span>];
+                </p>
+                <p class="code-text" style="margin-top: 13px;">
+                    string my_vector3[<span class="variable">500</span>];
+                </p>
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">bool</span> my_vector4[<span class="variable">1000</span>];
+                </p>
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">char</span> my_vector5[<span class="variable">2</span>];
+                </p>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        Ahora que sabemos declarar un array o vector, podemos proceder a inicializarlo.
+    </p>
+
+    <p class="subtitle-text">
+        ¿Cómo inicializar un Array o Vector?
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Inicializar un Array unidimensional o Vector
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">int</span> vector1[] = {<span class="variable">1</span>, <span class="variable">2</span>, <span class="variable">3</span>};
+                </p>
+                <p class="code-text">
+                    string vector2[<span class="variable">3</span>] = {<span class="text">"5"</span>, <span class="text">"hola"</span>, <span class="text">"2936"</span>};
+                </p>  
+
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">int</span> vector3[<span class="variable">3</span>];
+                </p>
+                <p class="code-text">
+                    vector3[<span class="variable">0</span>] = <span class="variable">1</span>;
+                </p>
+                <p class="code-text">
+                    vector3[<span class="variable">1</span>] = <span class="variable">3</span>;
+                </p>
+                <p class="code-text">
+                    vector3[<span class="variable">2</span>] = <span class="variable">10</span>;
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        Pues bien, creo que es todo de momento con los arrays, arreglos o vectores en C++ de momento, espero más adelante añadir unos videos tutoriales con más explicaciones y ejemplos de este tema, además de añadir varios ejemplos más aquí mismo. De momento, espero que toda esta información haya sido de tu utilidad.
+    </p>
+
+    <p class="subtitle-text"> Matrices</p>
+
+    <p class="normal-text">
+        Las matrices o como algunos las llaman "arreglos multidimensionales" son una estructura de datos bastante similar a los vectores o arreglos. De hecho, una matriz no es más que una serie de vectores contenidos uno en el otro (u otros), es decir, una matriz es un vector cuyas posiciones son otros vectores. Hablemos con más detalle de esto para quedar más claros.
+    </p>
+
+
+    <p class="normal-text">
+        Primero, dejemos claro qué es una matriz. En términos generales, una matriz es una estructura conformada por filas y columnas, idealmente más de dos filas y columnas, de hecho, podemos decir que si una "matriz" tiene una única fila o una única columna, entonces estamos hablando de un vector y no una matriz como tal.
+    </p>
+
+    <p class="normal-text">
+        La intersección de una fila y una columna de la matriz son las casillas y cada una de ellas podrá poseer información, simple o compleja (ya dependerá de nuestras necesidades).
+    </p>
+    <p class="normal-text">
+        Ahora, tal como dije antes, un vector posee una única fila (o columna, como lo quieras ver) y de este modo un grupo de vectores unidos conforman una matriz, es por esto que al comienzo dije que una matriz es un vector conformado por otra serie de vectores.
+    </p>
+    <p class="subtitle-text">
+        ¿Cómo se crea una Matriz?
+    </p>
+    <p class="normal-text">
+        Declarar una matriz en C++ es muy similar a la de un vector, se deben seguir las mismas normas para declarar una variable pero una vez más con un pequeño cambio en la sintaxis. Primero necesitaremos saber el tipo de los datos que irán al interior de este (números, decimales o cadenas de texto, etc.) necesitamos también, como siempre, un nombre para la matriz y un tamaño máximo tanto para las filas como para las columnas. La sintaxis para declarar una matriz en C++ es la siguiente:
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Inicializar un Array unidimensional o Vector
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    tipoDato nombreMatriz[filas][columnas];
+                </p>
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">int</span> matriz1[<span class="variable">10</span>][<span class="variable">5</span>];
+                </p> 
+
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">float</span> matriz2[<span class="variable">5</span>][<span class="variable">10</span>];
+                </p>
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">bool</span> matriz3[<span class="variable">1000</span>][<span class="variable">3</span>];
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="subtitle-text">
+        ¿Cómo inicializar una matriz?
+    </p>
+
+    <p class="normal-text">
+        En cuanto tenemos declarado una matriz, es posible asignarle valores a cada una de sus casillas, evidentemente estos valores deben coincidir con el tipo de dato que le asignamos a dicha matriz
+    </p>
+
+    <p class="normal-text">
+        Voy a mostrar a continuación formas distintas de inicializar una matriz, todas son validas, ya es cuestión de nuestras necesidades y conocimientos determinar cuál es útil y en qué momento.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+            <p class="example-text">
+                Inicializar un Array unidimensional o Vector
+            </p>
+            <div class="code-example">
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">int</span> matriz1[<span class="variable">2</span>][<span class="variable">2</span>] = {{1,2},{3,4}};
+                </p> 
+
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">float</span> matriz2[<span class="variable">5</span>][<span class="variable">10</span>];
+                </p>
+                <p class="code-text" style="margin-top: 13px;">
+                    matriz2[<span class="variable">0</span>][<span class="variable">0</span>] = <span class="variable">10.3</span>;
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <p class="normal-text">
+        Pues bien, creo que es todo en esta sección, espero más adelante añadir unos videos tutoriales con más explicaciones y ejemplos de este tema, además de añadir varios ejemplos más aquí mismo. De momento, espero que toda esta información haya sido de tu utilidad.
+    </p>
+
+    <div class="back-next">
+        <a href="Teoria4.html">
+            <button class="next-button">
+                &lt;&lt; Atras
+            </button>
+        </a>
+        <a href="Teoria6.html">
+            <button class="next-button">
+                Siguiente &gt;&gt;
+            </button>
+        </a> 
+    </div>
+
+    </div>
+    
+</body>
+</html>

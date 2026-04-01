@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Teoria.css">
+    <link href="https://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+    <title>Contenido Teorico</title>
+</head>
+<body>
+    <div class="upper-sidebar">
+        <div class="upper-logo-image">
+            <img class="upper-logo-image" src="AlgoByte.jpg" alt="AlgoByte logo">
+        </div>
+        <div class="middle-thing" style="flex: 1;">
+            <img class="upper-logo-image" style="margin-top: 3px;" src="python-logo.svg" alt="AlgoByte logo">
+        </div>
+        <div class="upper-profile">
+            <button class="upper-profile-text-button">
+                Ver Perfil
+            </button>
+            <button class="upper-profile-button">
+                <img class="upper-profile-image" src="foto_perfil.jpg" alt="kirby pfp">
+            </button>
+        </div>
+    </div>
+    <div class="left-sidebar">
+        <div>
+            <button class="icon-button">
+                <img class="icon-image" src="home1.svg" alt="icono casa">
+                <p class="icon-text">Inicio</p>
+            </button>
+        </div>
+    </div>
+
+    <p class="title-text">
+       Variables, Literales y Asignaciones
+    </p>
+    <p class="subtitle-text">
+        Los literales en Python
+    </p>
+
+    <p class="normal-text">
+        En general, un literal es un valor completamente "puro" o "primitivo" del lenguaje (Python en este caso). 
+        Es un elemento cuyo valor, se toma de forma literal por el lenguaje (de allí su nombre). 
+        Un número, una cadena de texto, básicamente cualquier valor primitivo, son considerados literales en Python. 
+        Vemos algunos ejemplos:
+    </p>
+
+    <p class="subtitle-text">
+        Ejemplos de literales en Python
+    </p>
+
+    <div class="flex">
+        <div class="example">
+
+            <p class="example-text">
+                Literales de cadenas de texto en Python
+            </p>
+
+            <div class="code-example">
+                <p class="code-text">
+                    print &lt;("hola, soy un literal")&gt;
+                </p>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <p class="normal-text">
+        Así es, todo lo que hay entre las comillas "" se lo considera un literal. En este caso, 
+        un literal que es una cadena de texto y print interpreta su valor y lo muestra en pantalla.
+    </p>
+
+    <div class="flex">
+        <div class="example">
+
+            <p class="example-text">
+                Literales númericos en Python
+            </p>
+
+            <div class="code-example">
+                <p class="code-text">
+                    print &lt;("1, 1.5, -5.2")&gt;
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        En este ejemplo, se estaria mostrando por pantalla el número entero 1, seguido por un número "flotante" o decimal 1.5, 
+        y un número negativo decimal -5.2. Todos ellos, una vez más son simplemente interpretados con su valor literal 
+        y mostrados por pantalla (separados por un espacio).
+    </p>
+    <p class="normal-text">
+        Ahora que ya entendemos los literales y su simplicidad, vamos a introducir el uso 
+        y asignación de variables en Python, pues para ello usaremos los literales en Python.
+    </p>
+
+    <p class="subtitle-text">
+        Variables y asignaciones en Python
+    </p>
+
+    <p class="normal-text">
+        Como el nombre lo indica, las variables son elementos que pueden cambiar de valor. En Python a una variable se le pueden asignar 
+        diferentes valores dentro de un programa e incluso diferentes tipos. Así es, una misma variable puede empezar siendo un número 1 
+        (un literal) y luego ser una cadena de texto (que también sería un literal). Aunque no es recomendable estar cambiando de tipos 
+        por claridad en el código, es perfectamente posible y se puede hacer si se considera necesario.
+    </p>
+
+    <p class="normal-text">
+        De lo anterior, podemos ver entonces la estrecha relación entre variables y literales, pues usualmente a una variable, de 
+        uno u otro modo se le asigna el valor de un literal. Esto no siempre es cierto, pero ahora que apenas comenzamos, será 
+        el caso más común. Veamos entonces algunos ejemplos de asignación de variables en Python:
+    </p>
+
+    <p class="subtitle-text">
+        Ejemplos de asignación de variables en Python
+    </p>
+
+    <div class="flex">
+        <div class="example">
+
+            <div class="code-example">
+                <p class="code-text">
+                    mi_texto= &lt; ""Hola de nuevo"&gt;
+                </p>
+                <p class="code-text"> 
+                    mi_numero= &lt; 134 &gt;
+                </p>
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">print</span> (mi_texto) 
+                </p>
+
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">print</span> (mi_numero) 
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        <p class="normal-text">
+            Como pudimos ver, la sintaxis es sencilla. Se le da un nombre a la variable en Python y luego, por medio del operador igual "=" se le da (asigna) un valor (que en este caso son literales). Así entonces, al ejecutar ese código, la pantalla mostrará "Hola de nuevo" y el número 134, al interpretar el valor asignado previamente a esas variables. Ahora bien, la cosa no termina ahí, pues Python es muy flexible con las variables y podemos hacer muchas cosas interesantes con ellas. Veamos:
+    </p>
+
+    <div class="flex">
+        <div class="example">
+
+            <div class="code-example">
+
+                <p class="code-text">
+                    mi_texto= &lt; ""Hola una vez más"&gt;
+                </p>
+
+                <p class="code-text">
+                    variable_mixta= &lt; "texto"&gt;
+                </p>
+
+                <p class="code-text"> 
+                    mi_numero= &lt; 506 &gt;
+                </p>
+
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">mi_texto</span> "Nuevo texto" <span class="comment">## Ahora vamos a reasignar los valores</span> 
+                </p>
+
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="reserved-word">mi_numero</span> 87877 
+                </p>
+
+                <p class="code-text" style="margin-top: 13px;">
+                        <span class="reserved-word">variable_mixta</span> 12.6 
+                </p>
+
+                <p class="code-text"> 
+                     nueva_variable= &lt; mi_numero &gt;
+                </p>
+
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="variable">print</span> (mi_texto) 
+                </p>
+
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="variable">print</span> (mi_numero) 
+                </p>
+
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="variable">print</span> (variable_mixta) 
+                </p>
+
+                <p class="code-text" style="margin-top: 13px;">
+                    <span class="variable">print</span> (nueva_variable) 
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <p class="normal-text">
+        <p class="normal-text">
+            Este ha sido un código interesante. Luego de ejecutarlo, mostrará Nuevo Texto seguido de 87877, 12.6 y de 87877 de nuevo, cada uno en su respectiva línea.
+        </p>
+    </p>
+
+    <p class="normal-text">
+        <p class="normal-text">
+            Veamos por partes todo el proceso, para estar claros.
+        </p>
+    </p>
+
+    <p class="normal-text">
+        <p class="normal-text">
+            Al arrancar con un valor, pero luego asignar otro, solo el último valor asignado es considerado. El valor anterior simplemente es sutituido por completo. Por ello es reasignación de variables en Python.
+    </p>
+
+    <p class="normal-text">
+        <p class="normal-text">
+            Es importante notar que la variable llamada "variable_mixta" inició siendo una cadena de texto y terminó siendo un número decimal sin ningún problema. Como ves Python es muy flexible. Sin embargo, procura ser consistente con tu código para evitar confusiones.
+    </p>
+
+    <p class="normal-text">
+        <p class="normal-text">
+            Algo también muy interesante es la variable llamada "nueva_variable" a la cual, no le asignamos una valor literal, sino otra variable. Pues bien, por supuesto también es posible y de ese modo, para este caso, "nueva_variable" se convirtió en una réplica de "mi_numero" pues ha recibido exactamente su mismo valor.
+    </p>
+    
+    <div class="back-next">
+        <a href="">
+            <button class="next-button">
+                &lt;&lt; Atras
+            </button>
+        </a>
+        <a href="">
+            <button class="next-button">
+                Siguiente &gt;&gt;
+            </button>
+        </a> 
+    </div>
+
+</body>
+</html>

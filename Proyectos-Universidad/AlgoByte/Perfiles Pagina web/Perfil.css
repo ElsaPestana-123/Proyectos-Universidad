@@ -1,0 +1,368 @@
+body {
+    padding-top: 50px;
+    padding-left: 95px;
+    font-family: Whitney, Arial;
+}
+
+p {
+    display: block;
+    margin: 0;
+}
+
+.title {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+.login {
+    padding: 10px 10px;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    background-color: rgba(43,45,49,255);
+    box-shadow: inset 0px 0px 3px black
+}
+
+.username-text {
+    color: #949ba0;
+    margin-top: 10px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.login-input {
+    background-color: rgba(30,31,34,255);
+    display: block;
+    border-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 6px;
+    color: #949ba0;
+    font-family: Whitney, Arial;
+    font-size: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 92%;
+}
+
+.login-input:focus, input:focus {
+    outline: none;
+ }
+
+ .divider {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 1px;
+    width: 200px;
+    border-bottom: solid;
+    border-bottom-color: rgba(30,31,34,255);
+    border-width: 1px;
+ }
+
+ .login-button {
+    color: white;
+    padding: 5px 43px;
+    font-family: Whitney, Arial;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    background-color: #EF3340;
+    border-radius: 3px;
+    border: none;
+    border-width: 1px;
+    transition: background-color 0.15s
+    opacity 0.10s;
+ }
+
+ .login-button:hover {
+    background-color: #f84a55;
+ }
+
+ .login-button:active {
+    background-color: #ff848c;
+ }
+
+.left-sidebar {
+    position: fixed;
+    top: 50px;
+    bottom: 0px;
+    left: 0px;
+    width: 90px;
+    background-color: rgba(43,45,49,255);
+}
+
+.upper-sidebar {
+    display: flex;
+    position: fixed;
+    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(30,31,34,255);
+    align-items: center;
+    justify-content: center;
+}
+
+.upper-logo-image {
+    flex: 1;
+    height: 40px;
+    margin-left: 6px;
+}
+
+.upper-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-profile-text {
+    margin-right: 10px;
+    color:white;
+}
+
+.upper-profile-image {
+    width: 36px;
+    border-radius: 50px;
+}
+
+.view-profile-text {
+    display: inline-block;
+}
+
+.upper-profile-text-button {
+    background: none;
+    border: none;
+    color: white;
+    font-family: Whitney, Arial;
+    cursor: pointer;
+    margin-right: 3px;
+    transition: opacity 0.15s;
+}
+
+.upper-profile-text-button:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.upper-profile-button {
+    margin: 0;
+    border: none;
+    border-radius: 50px;
+    margin: 0; 
+    padding: 0;
+    margin-right: 15px;
+    margin-top: 3px;
+    height: 36px; 
+    width: 36px;
+    cursor: pointer;
+}
+
+.profile-image {
+    color:white;
+}
+
+.icon-image {
+    width: 24px;
+}
+
+.icon-button {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 90px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-left-width: 2px;
+    border-left: solid;
+    border-left-color: gray;
+    transition: border-left-color 0.25s;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.icon-button:hover {
+    border-left-color: #5BD3C7;
+}
+
+.icon-button:active {
+    border-left-color: #88eee4;
+    text-decoration: none;
+}
+
+.icon-text {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 30px;
+}
+
+@media (max-width: 1020px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1600px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.class {
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    height: 100%;
+    border-radius: 10px;
+    min-width: 280px;
+}
+
+.class-image {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.description {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.class-icon-image {
+    object-fit: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-left: 5px;
+}
+
+.title-text {
+    font-weight: bold;
+}
+
+.description-text {
+    font-size: 11px;
+    margin-bottom: 8px;
+    margin-right: 7px;
+}
+
+.class-button {
+    cursor: pointer;
+    padding: 0; 
+    border:none; 
+    border-radius: 10px;
+    transition: all 0.15s;
+}
+
+.class-button:hover {
+    opacity: 0.9;
+}
+
+.profile {
+    padding: 20px;
+    display: flex;
+}
+
+.profile-image {
+    width: 200px;
+    border-radius: 200px;
+    border: 5px solid black;
+}
+
+.profile-preview {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-text {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.profile-description-text {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.profile-description {
+    margin-left: 40px;
+}
+
+.flag {
+    width: 300px;
+    margin-left: 100px;
+}
+
+.password-button {
+    font-family: Whitney, Arial;
+    font-weight: 700;
+    color: white;
+    margin-top: 30px;
+    margin-left: 140px;
+    padding: 5px 20px;
+    background-color: #EF3340;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 0.14s;
+}
+
+.password-button:hover {
+    background-color: #c52833;
+}
+
+.password-button:active {
+    background-color: #aa121c;
+}
+
+.logo-image {
+    width: 100px;
+ }
+
+ .logo {
+    margin-top: 45px;
+    height: 35px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+ }
+
+ .x-button {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    cursor: pointer;
+    padding-top: 2px;
+    background-color: white;
+    border: 1px solid black;
+  }

@@ -1,0 +1,134 @@
+body {
+    background-color: #E4DFCF;
+}
+
+p {
+    margin: 0;
+    font-family: Whitney, Arial;
+}
+
+span {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+.title {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.login {
+    padding: 10px 10px;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    background-color: rgba(43,45,49,255);
+    box-shadow: inset 0px 0px 3px black
+}
+/* 
+
+#E0E4EE
+#949ba0 
+rgba(30,31,34,255)
+rgba(43,45,49,255)
+
+#D7D2CB gris 
+#EF3340 roojo
+#25282A ggris osc
+
+
+*/
+.username-text {
+    color: #949ba0;
+    margin-top: 10px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.login-input {
+    background-color: rgba(30,31,34,255);
+    display: block;
+    border-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 6px;
+    color: #949ba0;
+    font-family: Whitney, Arial;
+    font-size: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 92%;
+}
+
+.login-input:focus, input:focus {
+    outline: none;
+ }
+
+ .divider {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 1px;
+    width: 200px;
+    border-bottom: solid;
+    border-bottom-color: rgba(30,31,34,255);
+    border-width: 1px;
+ }
+
+ .login-button {
+    color: white;
+    padding: 5px 63px;
+    font-family: Whitney, Arial;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    background-color: #EF3340;
+    border-radius: 3px;
+    border: none;
+    border-width: 1px;
+    transition: background-color 0.15s
+    opacity 0.10s;
+ }
+
+ .login-button:hover {
+    background-color: #f84a55;
+ }
+
+ .login-button:active {
+    background-color: #ff848c;
+ }
+
+ .copyright {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+ }
+
+ .copyright-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+ }
+
+ .logo-image {
+    width: 100px;
+ }
+
+ .logo {
+    height: 140px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+ }
